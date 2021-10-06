@@ -1,0 +1,19 @@
+{
+  "name": "@splight-ae/splight-ui",
+  "version": "1.0.0",
+  "description": "library",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://CholodEstrellaA@bitbucket.org/dp-factory/splight-ui.git"
+  },
+  "keywords": [
+    "Alexa1234$"
+  ],
+  "author": "Splight",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/dp-factory/splight-ui#readme"
+}
