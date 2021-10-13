@@ -1,6 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import AwesomeButton from "./sui-library/src/button/button.jsx";
+import AwesomeLabel from "./sui-library/src/label/label.jsx";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
         >
           Learn React
         </a>
+        <AwesomeButton>TEst button</AwesomeButton>
+        <AwesomeLabel>label desde librreri</AwesomeLabel>
       </header>
     </div>
   );
