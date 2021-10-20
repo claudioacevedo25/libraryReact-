@@ -1,11 +1,11 @@
 .theme_context_provider[theme="light"]{
-    --primary: #F3F3F6;
     --background: #FAFAFD;
+    --primary: #F3F3F6;
     --secondary: #F1F1F1;
     --text-color:#000000;
     --hierarchy1:#B7FDA0;
     --hierarchy2:#45B7BC;
-    --hierarchy3:#6AE8B0;
+    --hierarchy1:#6AE8B0;
   }
   
   .theme_context_provider[theme="dark"]{

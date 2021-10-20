@@ -1,14 +1,23 @@
 import './button.css';
 import React from 'react';
-import theme from '../themeContextProvider/theme.js'
+
 const AwesomeButton = ({clickHandler, variant, mode, ...props}) => {
+  let variantColor = ''
+  switch(variant){
+    case 'simple':
+      variantColor = 'primary'
+      break
+    case 'alternate':
+      variantColor = 'secondary'
+      break
+    default:
+      variantColor = ''
+      break
+  }
   const { children } = props;
   return (
     <button
-      className={`buttonComponent`}
-      style={{
-      '--variant-background': `${theme[mode][variant]}`,
-      '--variant-text-color': `${variant.indexOf('hierarchy') > -1 ? (theme['light']['text-color']) : (theme[mode]['text-color'])}`}}
+      className={`buttonComponent buttonComponent__${variantColor}`}
       onClick={clickHandler}
     >
       {children.toUpperCase()}

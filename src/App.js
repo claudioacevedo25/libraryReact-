@@ -8,11 +8,8 @@ function App() {
   const { mode, setTheme } = useContext(ThemeContext);
   return (
     <div className="App">
-        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'primary'}>Button Primary</AwesomeButton>
-        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'secondary'}>Button Secondary</AwesomeButton>
-        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'hierarchy1'}>Button Hierarchy 1</AwesomeButton>
-        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'hierarchy2'}>Button Hierarchy 2</AwesomeButton>
-        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'hierarchy3'}>Button Hierarchy 3</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'simple'}>Button Simple</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'alternate'}>Button Alternate</AwesomeButton>
 
         <AwesomeLabel variant={'primary'} mode={mode}>label desde librreri</AwesomeLabel>
     </div>

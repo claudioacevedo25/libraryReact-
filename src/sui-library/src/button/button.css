@@ -5,8 +5,7 @@
   border: none;
   transition: all 0.3s ease-out;
   box-shadow: #272727b0 1px 1px 1px, #272727b0 -1px -1px 1px;
-  background-color: var(--variant-background);
-  color:var(--variant-text-color);
+  color:var(--text-color);
   margin: 5px;
 }
 .buttonComponent:hover {
@@ -14,4 +13,11 @@
 }
 .buttonComponent:active {
   opacity: 0.8;
+}
+
+.buttonComponent__primary{
+  background-color: var(--primary);
+}
+.buttonComponent__secondary{
+  background-color: var(--secondary);
 }
