@@ -1,5 +1,5 @@
-import './button.css';
 import React from 'react';
+import './button.css';
 
 const AwesomeButton = ({clickHandler, variant, mode, ...props}) => {
   let variantColor = ''
