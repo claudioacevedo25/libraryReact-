@@ -1,11 +1,10 @@
 import React from "react";
+import './label.css'
 
-const AwesomeLabel = (props) => {
-    
+const AwesomeLabel = ({variant, ...props}) => {
     const { children } = props;
-  
     return (
-      <label >
+      <label>
         {children.toUpperCase()}
       </label>
     );

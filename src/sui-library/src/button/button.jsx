@@ -1,29 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./button.css";
+import React from 'react';
+import './button.css';
 
-const AwesomeButton = (props) => {
-  const [color, setColor] = useState(null);
-  useEffect(() => {
-    if (props.variant) {
-      if (props.variant === "primary") {
-        setColor("#0077ff");
-      } else if (props.variant === "secondary") {
-        setColor("#ff0062");
-      } else if (props.variant === "success") {
-        setColor("#0f8000");
-      } else {
-        setColor("#949393");
-      }
-    }
-  }, []);
+const AwesomeButton = ({clickHandler, variant, ...props}) => {
   const { children } = props;
-
   return (
     <button
-      className="buttonComponent"
-      style={{
-        backgroundColor: color,
-      }}
+      className={`buttonComponent buttonComponent__${variant}`}
+      onClick={clickHandler}
     >
       {children.toUpperCase()}
     </button>
