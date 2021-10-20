@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import "./App.css";
 import AwesomeButton from "./sui-library/src/button/button.jsx";
 import AwesomeLabel from "./sui-library/src/label/label.jsx";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
+import "./App.css";
 
 function App() {
   const { mode, setTheme } = useContext(ThemeContext);
