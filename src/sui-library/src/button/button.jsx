@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css';
 
-const AwesomeButton = ({clickHandler, variant, mode, ...props}) => {
+const AwesomeButton = ({clickHandler, variant, ...props}) => {
   let variantColor = ''
   switch(variant){
     case 'simple':

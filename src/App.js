@@ -5,13 +5,13 @@ import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContex
 import "./App.css";
 
 function App() {
-  const { mode, setTheme } = useContext(ThemeContext);
+  const { setTheme } = useContext(ThemeContext);
   return (
     <div className="App">
-        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'simple'}>Button Simple</AwesomeButton>
-        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'alternate'}>Button Alternate</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} variant={'simple'}>Button Simple</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} variant={'alternate'}>Button Alternate</AwesomeButton>
 
-        <AwesomeLabel variant={'primary'} mode={mode}>label desde librreri</AwesomeLabel>
+        <AwesomeLabel variant={'primary'}>label desde librreri</AwesomeLabel>
     </div>
   );
 }

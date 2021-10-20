@@ -1,7 +1,7 @@
 import React from "react";
 import './label.css'
 
-const AwesomeLabel = ({variant, mode, ...props}) => {
+const AwesomeLabel = ({variant, ...props}) => {
     const { children } = props;
     return (
       <label>
