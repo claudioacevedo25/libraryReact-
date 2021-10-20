@@ -1,26 +1,20 @@
-import logo from "./logo.svg";
+import { useContext } from "react";
 import "./App.css";
 import AwesomeButton from "./sui-library/src/button/button.jsx";
 import AwesomeLabel from "./sui-library/src/label/label.jsx";
+import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
+
 function App() {
+  const { mode, setTheme } = useContext(ThemeContext);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <AwesomeButton>TEst button</AwesomeButton>
-        <AwesomeLabel>label desde librreri</AwesomeLabel>
-      </header>
+        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'primary'}>Button Primary</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'secondary'}>Button Secondary</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'hierarchy1'}>Button Hierarchy 1</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'hierarchy2'}>Button Hierarchy 2</AwesomeButton>
+        <AwesomeButton clickHandler={setTheme} mode={mode} variant={'hierarchy3'}>Button Hierarchy 3</AwesomeButton>
+
+        <AwesomeLabel variant={'primary'} mode={mode}>label desde librreri</AwesomeLabel>
     </div>
   );
 }
