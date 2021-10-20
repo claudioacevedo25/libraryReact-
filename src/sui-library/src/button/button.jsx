@@ -2,22 +2,10 @@ import React from 'react';
 import './button.css';
 
 const AwesomeButton = ({clickHandler, variant, ...props}) => {
-  let variantColor = ''
-  switch(variant){
-    case 'simple':
-      variantColor = 'primary'
-      break
-    case 'alternate':
-      variantColor = 'secondary'
-      break
-    default:
-      variantColor = ''
-      break
-  }
   const { children } = props;
   return (
     <button
-      className={`buttonComponent buttonComponent__${variantColor}`}
+      className={`buttonComponent buttonComponent__${variant}`}
       onClick={clickHandler}
     >
       {children.toUpperCase()}

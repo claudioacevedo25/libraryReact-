@@ -15,9 +15,9 @@
   opacity: 0.8;
 }
 
-.buttonComponent__primary{
+.buttonComponent__simple{
   background-color: var(--primary);
 }
-.buttonComponent__secondary{
+.buttonComponent__alternate{
   background-color: var(--secondary);
 }
