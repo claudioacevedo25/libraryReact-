@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import AwesomeButton from "./sui-library/src/button/button.jsx";
-import AwesomeLabel from "./sui-library/src/label/label.jsx";
+import Typography from "./sui-library/src/typography/typography.js";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
 import "./App.css";
 
@@ -10,8 +10,7 @@ function App() {
     <div className="App">
         <AwesomeButton clickHandler={setTheme} variant={'simple'}>Button Simple</AwesomeButton>
         <AwesomeButton clickHandler={setTheme} variant={'alternate'}>Button Alternate</AwesomeButton>
-
-        <AwesomeLabel variant={'primary'}>label desde librreri</AwesomeLabel>
+<Typography variant="h1">Label</Typography>
     </div>
   );
 }
