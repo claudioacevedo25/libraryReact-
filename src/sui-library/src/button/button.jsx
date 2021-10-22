@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css';
 
-const AwesomeButton = ({clickHandler, variant, ...props}) => {
+const Button = ({clickHandler, variant, ...props}) => {
   const { children } = props;
   return (
     <button
@@ -13,4 +13,4 @@ const AwesomeButton = ({clickHandler, variant, ...props}) => {
   );
 };
 
-export default AwesomeButton;
+export default Button;
