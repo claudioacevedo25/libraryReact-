@@ -1,0 +1,44 @@
+.typography{
+    color: rgb(var(--color1)) ;
+    font-family:'Open Sans', sans-serif ;
+}
+
+.typography__h1{
+    font-weight: normal;
+font-size: 2.5rem;
+letter-spacing: 0.15rem;
+font-weight: 100;
+line-height: 140%;
+}
+
+.typography__h2{
+}
+
+
+.typography__subtitle{
+}
+
+
+.typography__body{
+}
+
+
+.typography__bodyBold{
+}
+
+.typography__small{
+}
+
+.typography__preTitle{
+}
+
+.typography__bodyBold{
+}
+
+
+.typography__h1{
+}
+
+
+.typography__h1{
+}
