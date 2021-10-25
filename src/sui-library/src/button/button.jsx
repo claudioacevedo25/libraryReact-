@@ -1,16 +1,17 @@
 import React from 'react';
+import Typography from '../typography/typography';
 import './button.css';
 
-const AwesomeButton = ({clickHandler, variant, ...props}) => {
+const Button = ({onClick, variant = 'normal', ...props}) => {
   const { children } = props;
   return (
     <button
       className={`buttonComponent buttonComponent__${variant}`}
-      onClick={clickHandler}
+      onClick={onClick}
     >
-      {children.toUpperCase()}
+      <Typography variant='textButton'>{children}</Typography>
     </button>
   );
 };
 
-export default AwesomeButton;
+export default Button;

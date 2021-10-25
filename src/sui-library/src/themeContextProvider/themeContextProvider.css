@@ -11,8 +11,8 @@
   }
   
   .theme_context_provider[theme="dark"]{
-    --background:0,0,0;
-    --primary:27,28,33;
+    --background: 0,0,0;
+    --primary: 27,28,33;
     --secondary: 49,50,56;
     --color1:255,255,255;
     --hierarchy1:183,253,160;
