@@ -10,9 +10,6 @@ function App() {
     <div className="App">
         <Button onClick={setTheme}>invite user</Button><hr/>
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
-        <Button>
-         <Typography variant='textButton'>text Button</Typography>
-        </Button>
       <div className="App__labels">
         <Typography variant="h1">Label h1</Typography>
         <Typography variant="h2">Label h2</Typography>

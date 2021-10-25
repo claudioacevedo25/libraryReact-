@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from '../typography/typography';
 import './button.css';
 
 const Button = ({onClick, variant = 'normal', ...props}) => {
@@ -8,7 +9,7 @@ const Button = ({onClick, variant = 'normal', ...props}) => {
       className={`buttonComponent buttonComponent__${variant}`}
       onClick={onClick}
     >
-      {children}
+      <Typography variant='textButton'>{children}</Typography>
     </button>
   );
 };
