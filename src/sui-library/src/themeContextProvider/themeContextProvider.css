@@ -1,19 +1,19 @@
 .theme_context_provider[theme="light"]{
-    --background: #FAFAFD;
-    --primary: #F3F3F6;
-    --secondary: #F1F1F1;
-    --text-color:#000000;
-    --hierarchy1:#B7FDA0;
-    --hierarchy2:#45B7BC;
-    --hierarchy1:#6AE8B0;
+    --background: 250,250,250;
+    --primary: 243,243,246;
+    --secondary: 241,241,241;
+    --color1:0,0,0;
+    --hierarchy1:183,253,160;
+    --hierarchy2:69,215,188;
+    --hierarchy1:106,232,176;
   }
   
   .theme_context_provider[theme="dark"]{
-    --background:#000000;
-    --primary:#1B1621;
-    --secondary: #313238;
-    --text-color:#FFFFFF;
-    --hierarchy1:#B7FDA0;
-    --hierarchy2:#45B7BC;
-    --hierarchy3:#6AE8B0;
+    --background:0,0,0;
+    --primary:27,28,33;
+    --secondary: 49,50,56;
+    --color1:255,255,255;
+    --hierarchy1:183,253,160;
+    --hierarchy2:69,215,188;
+    --hierarchy3:106,232,176;
   }

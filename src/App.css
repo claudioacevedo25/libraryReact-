@@ -4,7 +4,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--primary);
+  background-color: rgb(var(--primary));
 }
 
+.App__labels {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
 
