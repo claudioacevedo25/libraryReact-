@@ -1,7 +1,7 @@
 import React from "react";
 import './typography.css'
 
-const Typography = ({variant, color, size, ...props}) => {
+const Typography = ({variant="h3", color, size, ...props}) => {
     const { children } = props;
     
     return (
