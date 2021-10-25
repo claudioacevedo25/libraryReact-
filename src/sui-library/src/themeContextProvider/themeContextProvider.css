@@ -5,7 +5,8 @@
     --text-color:#000000;
     --hierarchy1:#B7FDA0;
     --hierarchy2:#45B7BC;
-    --hierarchy1:#6AE8B0;
+    --hierarchy3:#6AE8B0;
+    background-color: #FAFAFD;
   }
   
   .theme_context_provider[theme="dark"]{
@@ -16,4 +17,5 @@
     --hierarchy1:#B7FDA0;
     --hierarchy2:#45B7BC;
     --hierarchy3:#6AE8B0;
+    background-color:#000000;
   }
