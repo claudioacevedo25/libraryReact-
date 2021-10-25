@@ -51,26 +51,23 @@ var Typography = function Typography(_ref) {
   }, children);
 };
 
-var css = ".theme_context_provider[theme=\"light\"]{\r\n    --background: 250,250,250;\r\n    --primary: 243,243,246;\r\n    --secondary: 241,241,241;\r\n    --color1:0,0,0;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(250,250,250);\r\n  }\r\n  \r\n  .theme_context_provider[theme=\"dark\"]{\r\n    --background:0,0,0;\r\n    --primary:27,28,33;\r\n    --secondary: 49,50,56;\r\n    --color1:255,255,255;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(0,0,0);\r\n  }";
+var css = ".theme_context_provider[theme=\"light\"]{\r\n    --background: 250,250,250;\r\n    --primary: 243,243,246;\r\n    --secondary: 241,241,241;\r\n    --color1:0,0,0;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(250,250,250);\r\n    height: 100vh;\r\n  }\r\n  \r\n  .theme_context_provider[theme=\"dark\"]{\r\n    --background:0,0,0;\r\n    --primary:27,28,33;\r\n    --secondary: 49,50,56;\r\n    --color1:255,255,255;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(0,0,0);\r\n    height: 100vh;\r\n  }";
 n(css,{});
 
 var ThemeContext = /*#__PURE__*/React.createContext();
 
 var ThemeContextProvider = function ThemeContextProvider(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      onThemeChange = _ref.onThemeChange,
+      initialTheme = _ref.initialTheme;
 
-  var _useState = React.useState("dark"),
+  var _useState = React.useState(initialTheme),
       _useState2 = _slicedToArray__default["default"](_useState, 2),
       mode = _useState2[0],
       setTheme = _useState2[1];
 
-  React.useEffect(function () {
-    var savedTheme = JSON.parse(localStorage.getItem("themeMode"));
-    savedTheme && setTheme(savedTheme);
-  }, []);
-
   var toggleTheme = function toggleTheme() {
-    localStorage.setItem("themeMode", JSON.stringify(mode === "dark" ? "light" : "dark"));
+    onThemeChange && onThemeChange();
     setTheme(mode === "dark" ? "light" : "dark");
   };
 

@@ -1,5 +1,5 @@
 import _objectWithoutProperties from '@babel/runtime/helpers/objectWithoutProperties';
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
 import _slicedToArray from '@babel/runtime/helpers/slicedToArray';
 
 var e=[],t=[];function n(n,r){if(n&&"undefined"!=typeof document){var a,s=!0===r.prepend?"prepend":"append",d=!0===r.singleTag,i="string"==typeof r.container?document.querySelector(r.container):document.getElementsByTagName("head")[0];if(d){var u=e.indexOf(i);-1===u&&(u=e.push(i)-1,t[u]={}),a=t[u]&&t[u][s]?t[u][s]:t[u][s]=c();}else a=c();65279===n.charCodeAt(0)&&(n=n.substring(1)),a.styleSheet?a.styleSheet.cssText+=n:a.appendChild(document.createTextNode(n));}function c(){var e=document.createElement("style");if(e.setAttribute("type","text/css"),r.attributes)for(var t=Object.keys(r.attributes),n=0;n<t.length;n++)e.setAttribute(t[n],r.attributes[t[n]]);var a="prepend"===s?"afterbegin":"beforeend";return i.insertAdjacentElement(a,e),e}}
@@ -43,26 +43,23 @@ var Typography = function Typography(_ref) {
   }, children);
 };
 
-var css = ".theme_context_provider[theme=\"light\"]{\r\n    --background: 250,250,250;\r\n    --primary: 243,243,246;\r\n    --secondary: 241,241,241;\r\n    --color1:0,0,0;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(250,250,250);\r\n  }\r\n  \r\n  .theme_context_provider[theme=\"dark\"]{\r\n    --background:0,0,0;\r\n    --primary:27,28,33;\r\n    --secondary: 49,50,56;\r\n    --color1:255,255,255;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(0,0,0);\r\n  }";
+var css = ".theme_context_provider[theme=\"light\"]{\r\n    --background: 250,250,250;\r\n    --primary: 243,243,246;\r\n    --secondary: 241,241,241;\r\n    --color1:0,0,0;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(250,250,250);\r\n    height: 100vh;\r\n  }\r\n  \r\n  .theme_context_provider[theme=\"dark\"]{\r\n    --background:0,0,0;\r\n    --primary:27,28,33;\r\n    --secondary: 49,50,56;\r\n    --color1:255,255,255;\r\n    --hierarchy1:183,253,160;\r\n    --hierarchy2:69,215,188;\r\n    --hierarchy3:106,232,176;\r\n    background-color: rgb(0,0,0);\r\n    height: 100vh;\r\n  }";
 n(css,{});
 
 var ThemeContext = /*#__PURE__*/createContext();
 
 var ThemeContextProvider = function ThemeContextProvider(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      onThemeChange = _ref.onThemeChange,
+      initialTheme = _ref.initialTheme;
 
-  var _useState = useState("dark"),
+  var _useState = useState(initialTheme),
       _useState2 = _slicedToArray(_useState, 2),
       mode = _useState2[0],
       setTheme = _useState2[1];
 
-  useEffect(function () {
-    var savedTheme = JSON.parse(localStorage.getItem("themeMode"));
-    savedTheme && setTheme(savedTheme);
-  }, []);
-
   var toggleTheme = function toggleTheme() {
-    localStorage.setItem("themeMode", JSON.stringify(mode === "dark" ? "light" : "dark"));
+    onThemeChange && onThemeChange();
     setTheme(mode === "dark" ? "light" : "dark");
   };
 

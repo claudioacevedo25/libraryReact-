@@ -6,7 +6,7 @@ import ThemeContextProvider from "./sui-library/src/themeContextProvider/themeCo
 import './index.css';
 
 ReactDOM.render(
-  <ThemeContextProvider>
+  <ThemeContextProvider initialTheme='light' onThemeChange={()=>{console.log('Cambio de tema')}}>
   <React.StrictMode>
     <App />
   </React.StrictMode>
