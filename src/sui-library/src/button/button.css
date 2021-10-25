@@ -7,12 +7,12 @@
 }
 
 .buttonComponent:hover {
-  background-color: rgba(0, 0, 0, 0.20);
+  background-color: rgba(var(--color1), 0.20);
 }
 
 .buttonComponent:active {
-  background-color: rgba(0, 0, 0);
-  color: #fff;
+  background-color: rgb(var(--color1));
+  color:rgb(var(--primary));
 }
 
 .buttonComponent__simple{

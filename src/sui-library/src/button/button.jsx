@@ -1,12 +1,12 @@
 import React from 'react';
 import './button.css';
 
-const Button = ({clickHandler, variant, ...props}) => {
+const Button = ({onClick, variant, ...props}) => {
   const { children } = props;
   return (
     <button
       className={`buttonComponent buttonComponent__${variant}`}
-      onClick={clickHandler}
+      onClick={onClick}
     >
       {children.toUpperCase()}
     </button>
