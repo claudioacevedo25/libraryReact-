@@ -8,8 +8,8 @@ function App() {
   const { setTheme } = useContext(ThemeContext);
   return (
     <div className="App">
-        <Button onClick={setTheme} variant={'simple'}>invite user</Button><hr/>
-        <Button onClick={setTheme} variant={'alternate'}>Button Alternate</Button><hr/>
+        <Button onClick={setTheme}>invite user</Button><hr/>
+        <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
       
       <div className="App__labels">
         <Typography variant="h1">Label h1</Typography>

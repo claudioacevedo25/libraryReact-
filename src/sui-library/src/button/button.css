@@ -15,7 +15,7 @@
   color:rgb(var(--primary));
 }
 
-.buttonComponent__simple{
+.buttonComponent__normal{
   background-color: rgb(var(--primary));
 }
 

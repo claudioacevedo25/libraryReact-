@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css';
 
-const Button = ({onClick, variant, ...props}) => {
+const Button = ({onClick, variant = 'normal', ...props}) => {
   const { children } = props;
   return (
     <button
