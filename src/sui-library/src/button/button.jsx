@@ -8,7 +8,7 @@ const Button = ({onClick, variant = 'normal', ...props}) => {
       className={`buttonComponent buttonComponent__${variant}`}
       onClick={onClick}
     >
-      {children.toUpperCase()}
+      {children}
     </button>
   );
 };
