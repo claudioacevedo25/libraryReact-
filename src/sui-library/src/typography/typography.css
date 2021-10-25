@@ -47,7 +47,8 @@
   letter-spacing: 0.02rem;
 }
 
-.typography__bodyBold {
+.typography__textButton {
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 600;
+  text-transform: uppercase;
 }
