@@ -6,4 +6,9 @@
   height: 100vh;
 }
 
+.App__labels {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
 

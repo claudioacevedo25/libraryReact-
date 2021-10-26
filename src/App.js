@@ -1,8 +1,7 @@
 import { useContext, useState } from "react";
+import Button from "./sui-library/src/button/button.jsx";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
-import AwesomeButton from "./sui-library/src/button/button.jsx";
-import AwesomeLabel from "./sui-library/src/label/label.jsx";
-import ToggleSwitch from "./sui-library/src/switch/toggleSwitch";
+import Typography from "./sui-library/src/typography/typography.js";
 import "./App.css";
 
 function App() {
@@ -15,10 +14,21 @@ function App() {
 
   return (
     <div className="App">
-        <ToggleSwitch onChange={toggleCheckbox} id={'switchA'} disabled={false} color='cyan' checked={checkboxState}  size={'small'} variant={'simple'} />
-        <AwesomeButton clickHandler={setTheme} variant={'simple'}>Button Simple</AwesomeButton>
-        <AwesomeButton clickHandler={setTheme} variant={'alternate'}>Button Alternate</AwesomeButton>
-        <AwesomeLabel variant={'primary'}>label desde librreri</AwesomeLabel>
+        <Button onClick={setTheme}>invite user</Button><hr/>
+        <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
+      <div className="App__labels">
+        <Typography variant="h1">Label h1</Typography>
+        <Typography variant="h2">Label h2</Typography>
+        <Typography variant="h3">Label h3</Typography>
+        <Typography variant="subtitle">Label subtitle</Typography>
+        <Typography variant="body">Label body</Typography>
+        <Typography variant="bodyBold">Label bodyBold</Typography>
+        <Typography variant="small">Label small</Typography>
+        <Typography variant="preTitle">Label preTitle</Typography>
+        <Typography variant="textButton">Label textButton</Typography>
+        <Typography >No variant</Typography>
+        <Typography variant="body" color="red" size="1.8rem" >Color and size</Typography>
+      </div>
     </div>
   );
 }
