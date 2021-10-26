@@ -12,3 +12,7 @@
   flex-direction: column;
 }
 
+.App__avatar {
+  display: flex;
+  flex-direction: row;
+}
