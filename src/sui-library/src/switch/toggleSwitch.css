@@ -1,134 +1,161 @@
-.toggle-switch {
-    position: relative;
-    width: 75px;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    text-align: left;
-  }
-  .toggle-switch-checkbox {
-    display: none;
-  }
-  .toggle-switch-label {
-    display: block;
-    overflow: hidden;
-    cursor: pointer;
-    border: 0 solid #ccc;
-    border-radius: 20px;
-    margin: 0;
-  }
-  .toggle-switch-inner {
-    display: block;
-    width: 200%;
-    margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-  }
-  .toggle-switch-inner::before, .toggle-switch-inner::after {
-    display: block;
-    float: left;
-    width: 50%;
-    height: 34px;
-    padding: 0;
-    line-height: 34px;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    box-sizing: border-box;
-  }
-  .toggle-switch-inner:before {
-    content: " ";
-    text-transform: uppercase;
-    padding-left: 10px;
-    background-color: var(--on-color);
-    color: #fff;
-  }
-  .toggle-switch-disabled {
-    background-color: #AAA;
-    cursor: not-allowed;
-  }
-  .toggle-switch-disabled::before {
-    background-color: #AAA;
-    cursor: not-allowed;
-  }
-  .toggle-switch-inner::after {
-    content: " ";
-    text-transform: uppercase;
-    padding-right: 10px;
-    background-color: #AAA;
-    color: #fff;
-    text-align: right;
-  }
-  .toggle-switch-switch {
-    display: block;
-    width: 24px;
-    margin: 5px;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 40px;
-    border: 0 solid #ccc;
-    border-radius: 20px;
-    transition: all 0.3s ease-in 0s;
-  }
-  .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
-    margin-left: 0;
-  }
-  .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
-    right: 0px;
-  }
+.toggleSwitch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+}
 
-  .toggle-switch.large-switch {
-    width: 120px;
-  }
-  .toggle-switch.large-switch .toggle-switch-inner:after, .toggle-switch.large-switch .toggle-switch-inner:before {
-    content: "";
-    height: 60px;
-    line-height: 60px;
-    border-radius: 60px;
-  }
-  .toggle-switch.large-switch .toggle-switch-switch {
-    width: 54px;
-    height: 54px;
-    border-radius: 60px;
-    right: 60px;
-    margin: 2px;
-  }
+.toggle__switch__checkbox {
+  display: none;
+}
 
-   .toggle-switch.medium-switch {
-    width: 60px;
-    height: 30px;
-  }
-  .toggle-switch.medium-switch .toggle-switch-inner:after, .toggle-switch.medium-switch .toggle-switch-inner:before {
-    content: "";
-    height: 30px;
-    line-height: 30px;
-    border-radius: 30px;
-  }
-  .toggle-switch.medium-switch .toggle-switch-switch {
-    width: 28px;
-    height: 28px;
-    border-radius: 60px;
-    height: 26px;
-    right: 30px;
-    margin: 2px;
-  }
-  
-  
-  .toggle-switch.small-switch {
-    width: 40px;
-    height: 40px;
-  }
-  .toggle-switch.small-switch .toggle-switch-inner:after, .toggle-switch.small-switch .toggle-switch-inner:before {
-    content: "";
-    height: 20px;
-    line-height: 20px;
-  }
-  .toggle-switch.small-switch .toggle-switch-switch {
-    width: 16px;
-    height: 16px;
-    right: 20px;
-    margin: 2px;
-  }
+.toggle__switch__label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #ccc;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.toggle__switch__inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.toggle__switch__inner::before,
+.toggle__switch__inner::after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 34px;
+  padding: 0;
+  line-height: 34px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.toggle__switch__inner:before {
+  content: " ";
+  text-transform: uppercase;
+  padding-left: 10px;
+  background-color: rgb(var(--color1));
+  color: #fff;
+}
+
+.toggle__switch__inner[color]:before {
+  background-color: var(--onColor);
+}
+
+.toggle__switch__disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.toggle__switch__disabled::before {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.toggle__switch__inner::after {
+  content: " ";
+  text-transform: uppercase;
+  padding-right: 10px;
+  background-color: #aaa;
+  color: #fff;
+  text-align: right;
+}
+
+.toggle__switch__switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: rgb(var(--secondary));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border: 0 solid #ccc;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.toggle__switch__checkbox:checked
+  + .toggle__switch__label
+  .toggle__switch__inner {
+  margin-left: 0;
+}
+
+.toggle__switch__checkbox:checked
+  + .toggle__switch__label
+  .toggle__switch__switch {
+  right: 0px;
+}
+
+.toggleSwitch.lg__switch {
+  width: 120px;
+}
+
+.toggleSwitch.lg__switch .toggle__switch__inner:after,
+.toggleSwitch.lg__switch .toggle__switch__inner:before {
+  content: "";
+  height: 60px;
+  line-height: 60px;
+  border-radius: 60px;
+}
+
+.toggleSwitch.lg__switch .toggle__switch__switch {
+  width: 54px;
+  height: 54px;
+  border-radius: 60px;
+  right: 60px;
+  margin: 2px;
+}
+
+.toggleSwitch.md__switch {
+  width: 60px;
+  height: 30px;
+}
+
+.toggleSwitch.md__switch .toggle__switch__inner:after,
+.toggleSwitch.md__switch .toggle__switch__inner:before {
+  content: "";
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+}
+
+.toggleSwitch.md__switch .toggle__switch__switch {
+  width: 28px;
+  height: 28px;
+  border-radius: 60px;
+  height: 26px;
+  right: 30px;
+  margin: 2px;
+}
+
+.toggleSwitch.sm__switch {
+  width: 40px;
+  height: 40px;
+}
+
+.toggleSwitch.sm__switch .toggle__switch__inner:after,
+.toggleSwitch.sm__switch .toggle__switch__inner:before {
+  content: "";
+  height: 20px;
+  line-height: 20px;
+}
+.toggleSwitch.sm__switch .toggle__switch__switch {
+  width: 16px;
+  height: 16px;
+  right: 20px;
+  margin: 2px;
+}

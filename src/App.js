@@ -2,8 +2,8 @@ import { useContext } from "react";
 import Button from "./sui-library/src/button/button.jsx";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
 import Typography from "./sui-library/src/typography/typography.js";
-import "./App.css";
 import SwitchTest from "./components/switchTest/switchTest.jsx";
+import "./App.css";
 
 function App() {
   const { setTheme } = useContext(ThemeContext);
