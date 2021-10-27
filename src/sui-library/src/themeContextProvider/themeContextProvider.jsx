@@ -17,8 +17,10 @@ const ThemeContextProvider = ({ children, onThemeChange, initialTheme }) => {
         setTheme: toggleTheme
       }}
     >
-      <div theme={mode}
-      className={'theme_context_provider'}>
+      <div 
+        theme={mode}
+        className={'theme_context_provider'}
+      >
         {children}
       </div>
     </ThemeContext.Provider>
