@@ -26,7 +26,7 @@ function App() {
         <Typography variant="preTitle">Label preTitle</Typography>
         <Typography variant="textButton">Label textButton</Typography>
         <Typography>No variant</Typography>
-        <Typography variant="body" color="red" size="1.8rem">
+        <Typography variant="body" color="red" size="1.8">
           Color and size
         </Typography>
       </div>
