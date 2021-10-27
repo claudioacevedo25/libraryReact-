@@ -1,5 +1,5 @@
 import Button from "./button/button.jsx";
-import Typography from "./typography/typography.js";
+import Typography from "./typography/typography.jsx";
 import SplightNameIcon from "./icons/splightName.jsx";
 import SplightRoundedIcon from "./icons/splightRounded.jsx";
 import Avatar from "./avatar/avatar.jsx";

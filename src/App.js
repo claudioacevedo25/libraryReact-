@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Button from "./sui-library/src/button/button.jsx";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
-import Typography from "./sui-library/src/typography/typography.js";
+import Typography from "./sui-library/src/typography/typography.jsx";
 import SplightRounded from "./sui-library/src/icons/splightRounded.jsx";
 import SplightName from "./sui-library/src/icons/splightName.jsx";
 import Avatar from "./sui-library/src/avatar/avatar.jsx";
