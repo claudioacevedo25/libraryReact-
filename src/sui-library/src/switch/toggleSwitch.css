@@ -45,18 +45,18 @@
     color: #fff;
   }
   .toggle-switch-disabled {
-    background-color: #ccc;
+    background-color: #AAA;
     cursor: not-allowed;
   }
   .toggle-switch-disabled::before {
-    background-color: #ccc;
+    background-color: #AAA;
     cursor: not-allowed;
   }
   .toggle-switch-inner::after {
     content: " ";
     text-transform: uppercase;
     padding-right: 10px;
-    background-color: #ccc;
+    background-color: #AAA;
     color: #fff;
     text-align: right;
   }
@@ -79,9 +79,47 @@
   .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
     right: 0px;
   }
+
+  .toggle-switch.large-switch {
+    width: 120px;
+  }
+  .toggle-switch.large-switch .toggle-switch-inner:after, .toggle-switch.large-switch .toggle-switch-inner:before {
+    content: "";
+    height: 60px;
+    line-height: 60px;
+    border-radius: 60px;
+  }
+  .toggle-switch.large-switch .toggle-switch-switch {
+    width: 54px;
+    height: 54px;
+    border-radius: 60px;
+    right: 60px;
+    margin: 2px;
+  }
+
+   .toggle-switch.medium-switch {
+    width: 60px;
+    height: 30px;
+  }
+  .toggle-switch.medium-switch .toggle-switch-inner:after, .toggle-switch.medium-switch .toggle-switch-inner:before {
+    content: "";
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+  }
+  .toggle-switch.medium-switch .toggle-switch-switch {
+    width: 28px;
+    height: 28px;
+    border-radius: 60px;
+    height: 26px;
+    right: 30px;
+    margin: 2px;
+  }
+  
   
   .toggle-switch.small-switch {
     width: 40px;
+    height: 40px;
   }
   .toggle-switch.small-switch .toggle-switch-inner:after, .toggle-switch.small-switch .toggle-switch-inner:before {
     content: "";
@@ -90,7 +128,7 @@
   }
   .toggle-switch.small-switch .toggle-switch-switch {
     width: 16px;
+    height: 16px;
     right: 20px;
     margin: 2px;
   }
-  

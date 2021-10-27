@@ -2,6 +2,7 @@ import React from 'react';
 import './toggleSwitch.css';
   
 const ToggleSwitch = ({onChange, disabled, color, checked, size, id}) => {
+  
   const getSwitchOnColor = ()=>{
     if(color && !disabled){
       return color
@@ -10,11 +11,25 @@ const ToggleSwitch = ({onChange, disabled, color, checked, size, id}) => {
     }else{return '#313238'}
   }
 
+  const getSwitchSize = ()=>{
+    if(size){
+      switch(size){
+        case 'sm':
+          return 'small'
+        case 'md':
+          return 'medium'
+        case 'lg':
+          return 'large'
+        default:
+          return 'medium'
+      }
+    }else{return 'medium'}
+  }
+
   return (
     <div className={`
      toggle-switch
-     ${size==='small' ? 'small-switch': ''}`
-     
+     ${`${getSwitchSize()}-switch`}`
      } style={{'--on-color': getSwitchOnColor()}}>
       <input
         type='checkbox'

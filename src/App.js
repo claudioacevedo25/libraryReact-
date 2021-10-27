@@ -1,21 +1,18 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Button from "./sui-library/src/button/button.jsx";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
 import Typography from "./sui-library/src/typography/typography.js";
 import "./App.css";
+import SwitchTest from "./components/switchTest/switchTest.jsx";
 
 function App() {
-  const { mode, setTheme } = useContext(ThemeContext);
-  const [checkboxState, setCheckboxState] = useState(true)
-
-  const toggleCheckbox = () =>{
-    setCheckboxState(!checkboxState)
-  }
-
+  const { setTheme } = useContext(ThemeContext);
+  
   return (
     <div className="App">
         <Button onClick={setTheme}>invite user</Button><hr/>
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
+        <SwitchTest/>
       <div className="App__labels">
         <Typography variant="h1">Label h1</Typography>
         <Typography variant="h2">Label h2</Typography>
