@@ -19,7 +19,7 @@ const ThemeContextProvider = ({ children, onThemeChange, initialTheme }) => {
     >
       <div 
         theme={mode}
-        className={'theme_context_provider'}
+        className={'theme__context__provider'}
       >
         {children}
       </div>

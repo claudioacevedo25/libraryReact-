@@ -1,4 +1,4 @@
-.theme_context_provider[theme="light"]{
+.theme__context__provider[theme="light"]{
     --background: 250,250,250;
     --primary: 243,243,246;
     --secondary: 241,241,241;
@@ -10,7 +10,7 @@
     height: 100vh;
   }
   
-  .theme_context_provider[theme="dark"]{
+  .theme__context__provider[theme="dark"]{
     --background: 0,0,0;
     --primary: 27,28,33;
     --secondary: 49,50,56;
