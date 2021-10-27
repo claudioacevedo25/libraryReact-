@@ -56,20 +56,21 @@
 }
 
 .toggle__switch__disabled {
-  background-color: #aaa;
+  background-color: rgb(var(--color1) , 0.3);
   cursor: not-allowed;
 }
 
-.toggle__switch__disabled::before {
-  background-color: #aaa;
+.toggle__switch__disabled:before {
+  background-color: rgb(var(--color1) , 0.3);
   cursor: not-allowed;
 }
 
-.toggle__switch__inner::after {
+.toggle__switch__inner:after {
   content: " ";
   text-transform: uppercase;
   padding-right: 10px;
-  background-color: #aaa;
+  background-color: rgb(var(--color1));
+  opacity: 70%;
   color: #fff;
   text-align: right;
 }
