@@ -1,20 +1,20 @@
 import { useContext } from "react";
 import Button from "./sui-library/src/button/button.jsx";
+import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
 import Typography from "./sui-library/src/typography/typography.jsx";
+import SplightRounded from "./sui-library/src/icons/splightRounded.jsx";
+import SplightName from "./sui-library/src/icons/splightName.jsx";
 import Avatar from "./sui-library/src/avatar/avatar.jsx";
-import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider";
 import "./App.css";
 
 function App() {
   const { setTheme } = useContext(ThemeContext);
   return (
     <div className="App">
-      <Button onClick={setTheme}>invite user</Button>
-      <hr />
-      <Button onClick={setTheme} variant="alternate">
-        Variant Alternate
-      </Button>
-      <hr />
+        <Button onClick={setTheme}>invite user</Button><hr/>
+        <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
+        <SplightRounded/>
+        <SplightName/>
       <div className="App__labels">
         <Typography variant="h1">Label h1</Typography>
         <Typography variant="h2">Label h2</Typography>
