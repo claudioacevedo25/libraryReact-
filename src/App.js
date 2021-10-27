@@ -4,6 +4,7 @@ import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContex
 import Typography from "./sui-library/src/typography/typography.js";
 import SplightRounded from "./sui-library/src/icons/splightRounded.jsx";
 import SplightName from "./sui-library/src/icons/splightName.jsx";
+import Avatar from "./sui-library/src/avatar/avatar.jsx";
 import "./App.css";
 
 function App() {
@@ -24,8 +25,17 @@ function App() {
         <Typography variant="small">Label small</Typography>
         <Typography variant="preTitle">Label preTitle</Typography>
         <Typography variant="textButton">Label textButton</Typography>
-        <Typography >No variant</Typography>
-        <Typography variant="body" color="red" size="1.8rem" >Color and size</Typography>
+        <Typography>No variant</Typography>
+        <Typography variant="body" color="red" size="1.8">
+          Color and size
+        </Typography>
+      </div>
+      <div className="App__avatar">
+        <Avatar
+          src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
+          name="Thomas "
+        />
+        <Avatar name="Estrella cholod" />
       </div>
     </div>
   );
