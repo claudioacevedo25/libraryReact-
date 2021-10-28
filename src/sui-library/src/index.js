@@ -5,9 +5,9 @@ import SplightRoundedIcon from "./icons/splightRounded.jsx";
 import Avatar from "./avatar/avatar.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './ThemeContextProvider/theme.js'
+import ToggleSwitch from "./switch/toggleSwitch.jsx";
 
 // eslint-disable-next-line import/no-anonymous-default-export
-
 export default { 
     Avatar,
     Button, 
@@ -16,5 +16,6 @@ export default {
     ThemeContext, 
     theme,
     SplightRoundedIcon,
-    SplightNameIcon
+    SplightNameIcon,
+    ToggleSwitch
  };
