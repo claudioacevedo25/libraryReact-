@@ -6,7 +6,7 @@ const ToggleSwitch = ({onChange, disabled, color, checked, size='md', id}) => {
   return (
     <div className={`
      toggleSwitch
-     ${`${size}__switch`}${disabled ? `toggle__switch__disabled` : ''}`
+     ${`${size}__switch`}${disabled ? ` toggle__switch__disabled` : ''}`
      } >
       <input
         type='checkbox'

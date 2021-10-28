@@ -5,7 +5,7 @@ const  SwitchTest = () => {
 
     const [checkboxState, setCheckboxState] = useState({
     switchNormalA:false,
-    switchNormalB:false,
+    switchNormalB:true,
     switchSmallA:false,
     switchSmallB:false,
     switchLargeA:false,
@@ -22,7 +22,7 @@ const  SwitchTest = () => {
 
     return (
         <div className="container__switches">
-        <ToggleSwitch checked={checkboxState.switchLargeA} size={'lg'} onChange={
+        <ToggleSwitch checked={checkboxState.switchLargeA} size={'lg'} disabled={true} onChange={
           ()=>{
             toggleCheckbox('switchLargeA')
           }
@@ -38,7 +38,7 @@ const  SwitchTest = () => {
             toggleCheckbox('switchNormalA')
           }
          } id={"ToggleSwitchNormalA"}/>
-         <ToggleSwitch checked={checkboxState.switchNormalB} size={'md'} onChange={
+         <ToggleSwitch checked={checkboxState.switchNormalB} size={'md'} disabled onChange={
           ()=>{
             toggleCheckbox('switchNormalB')
           }

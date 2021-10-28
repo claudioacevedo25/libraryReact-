@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import Button from "./sui-library/src/button/button.jsx";
+import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
 import Typography from "./sui-library/src/typography/typography.jsx";
+import SplightRounded from "./sui-library/src/icons/splightRounded.jsx";
+import SplightName from "./sui-library/src/icons/splightName.jsx";
 import Avatar from "./sui-library/src/avatar/avatar.jsx";
-import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider";
 import SwitchTest from "./components/switchTest/switchTest.jsx";
 import "./App.css";
 
@@ -11,13 +13,11 @@ function App() {
   
   return (
     <div className="App">
-      <Button onClick={setTheme}>invite user</Button>
-      <hr />
-      <Button onClick={setTheme} variant="alternate">
-        Variant Alternate
-      </Button>
-      <SwitchTest />
-      <hr />
+        <Button onClick={setTheme}>invite user</Button><hr/>
+        <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
+        <SwitchTest />
+        <SplightRounded/>
+        <SplightName/>
       <div className="App__labels">
         <Typography variant="h1">Label h1</Typography>
         <Typography variant="h2">Label h2</Typography>
