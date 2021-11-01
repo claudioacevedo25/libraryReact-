@@ -9,8 +9,8 @@ const SelectLang = ({className, languages, onClick, selectedLang}) => {
     return (
         <div className='selectLangComponent'>
             {
-                languages.map((lang, index) => {
-                   return (
+                languages.map((lang, index) => 
+                  
                     <button 
                         key={index}
                         className={`${className} selectLangButton`}
@@ -22,8 +22,8 @@ const SelectLang = ({className, languages, onClick, selectedLang}) => {
                            </Typography>
                        </span>
                     </button>
-                   )
-                })
+                   
+                )
             }
         </div>
     )
