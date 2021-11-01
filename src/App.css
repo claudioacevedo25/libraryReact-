@@ -12,6 +12,10 @@
   flex-direction: column;
 }
 
+.App__labels:nth-last-child(){
+  font-size: 30px;
+}
+
 .App__avatar {
   display: flex;
   flex-direction: row;

@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext} from "react";
 import Button from "./sui-library/src/button/button.jsx";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
 import Typography from "./sui-library/src/typography/typography.jsx";
 import SplightRounded from "./sui-library/src/icons/splightRounded.jsx";
 import SplightName from "./sui-library/src/icons/splightName.jsx";
 import Avatar from "./sui-library/src/avatar/avatar.jsx";
+import Popover from "./sui-library/src/popover";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,13 @@ function App() {
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
         <SplightRounded/>
         <SplightName/>
+        <Popover displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
+          src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
+          name="Thomas "
+        />
+        <Typography variant="h3">Daniel moore kfjdksjkas</Typography>
+        <Button >My Profile</Button>
+        </Popover>
       <div className="App__labels">
         <Typography variant="h1">Label h1</Typography>
         <Typography variant="h2">Label h2</Typography>
@@ -29,7 +37,9 @@ function App() {
         <Typography variant="body" color="red" size="1.8">
           Color and size
         </Typography>
+        <label>ultimo</label>
       </div>
+     
       <div className="App__avatar">
         <Avatar
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
@@ -37,6 +47,7 @@ function App() {
         />
         <Avatar name="Estrella cholod" />
       </div>
+      
     </div>
   );
 }
