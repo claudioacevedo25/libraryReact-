@@ -1,10 +1,10 @@
 import React from 'react';
 import './toggleSwitch.css';
   
-const ToggleSwitch = ({onChange, disabled, color, checked, size='md', id}) => {
+const ToggleSwitch = ({className, onChange, disabled, color, checked, size='md', id}) => {
   
   return (
-    <div className={`
+    <div className={`${className}
      toggleSwitch
      ${`${size}__switch`}${disabled ? ` toggle__switch__disabled` : ''}`
      } >

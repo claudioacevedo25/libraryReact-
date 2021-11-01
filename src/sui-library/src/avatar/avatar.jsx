@@ -2,13 +2,13 @@ import React from "react";
 import Typography from "../typography/typography";
 import "./avatar.css";
 
-const Avatar = ({ src, name }) => {
+const Avatar = ({ src, name, className }) => {
   const surname = !!name && name.split(" ").pop();
 
   return src ? (
-    <img src={src} alt={name} className={`avatar`} />
+    <img src={src} alt={name} className={`${className} avatar`} />
   ) : (
-    <div className={`avatar avatar__initials`}>
+    <div className={`${className} avatar avatar__initials`}>
       <Typography variant="bodyBold">
         {!!name && name.charAt(0) + " " + surname.charAt(0)}
       </Typography>
