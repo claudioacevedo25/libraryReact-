@@ -30,7 +30,6 @@ ToggleSwitch.defaultProps = {
   onChange:()=>{},
   size: 'md',
   disabled: false,
-  color: '',
   checked: false,
   id: '',
 };
@@ -39,7 +38,6 @@ ToggleSwitch.propTypes = {
   onChange: PropTypes.func.isRequired,
   size: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
-  color: PropTypes.string,
   checked: PropTypes.bool,
   id: PropTypes.string.isRequired
 };
