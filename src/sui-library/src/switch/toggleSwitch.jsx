@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './toggleSwitch.css';
   
-const ToggleSwitch = ({onChange, disabled, color, checked, size='md', id}) => {
+const ToggleSwitch = ({className, onChange, disabled, color, checked, size, id}) => {
   
   return (
-    <div className={`
+    <div className={`${className}
      toggleSwitch
      ${`${size}__switch`}${disabled ? ` toggle__switch__disabled` : ''}`
      } >
@@ -24,5 +25,22 @@ const ToggleSwitch = ({onChange, disabled, color, checked, size='md', id}) => {
     </div>
   );
 };
+
+ToggleSwitch.defaultProps = {
+  onChange:()=>{},
+  size: 'md',
+  disabled: false,
+  checked: false,
+  id: '',
+};
+
+ToggleSwitch.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  size: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  checked: PropTypes.bool,
+  id: PropTypes.string.isRequired
+};
+
   
 export default ToggleSwitch;

@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .App__labels {
@@ -15,4 +14,8 @@
 .App__avatar {
   display: flex;
   flex-direction: row;
+}
+
+div {
+  margin: 8px;
 }

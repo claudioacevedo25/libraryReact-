@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import ToggleSwitch from "../../sui-library/src/switch/toggleSwitch.jsx";
+import ToggleSwitch from "../../sui-library/src/switch";
 import './switchTest.css'
 const  SwitchTest = () => {
 
