@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
+import PropTypes from 'prop-types';
 import { ThemeContext } from "../themeContextProvider/themeContextProvider";
 import DarkIcon from './assets/darkSplight.svg';
 import LightIcon from './assets/lightSplight.svg';
 
 
-const SplightName = ({className, size = 36}) => {
+const SplightName = ({className, size}) => {
     const {mode} = useContext(ThemeContext);
     const width = size + 76;
     const src = mode === 'dark' ? DarkIcon : LightIcon;
@@ -17,5 +18,13 @@ const SplightName = ({className, size = 36}) => {
         />
     )
 }
+
+SplightName.defaultProps = {
+    size: 36,
+  };
+  
+SplightName.propTypes = {
+    size: PropTypes.number.isRequired,
+};
 
 export default SplightName;
