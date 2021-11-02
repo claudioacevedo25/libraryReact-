@@ -1,0 +1,35 @@
+.selectLangComponent {
+    display: flex;
+    border-radius: 19px;
+    padding: 5px 11px;
+    border: 0.5px solid #000;
+    background-color: rgba(var(--primary));
+}
+
+.selectLangButton {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    color:rgb(var(--color1));
+    padding: 0;
+}
+
+.addPiped > label {
+    cursor: pointer;  
+    opacity: 30%;
+}
+
+.addPiped::after {
+    content: "|";
+    margin: 0 6px;
+}
+
+.selectLangButton:last-child > span:nth-child(1)::after{
+    content: '';
+    margin: 0;
+}
+
+.selectLangButton--active label {
+    opacity: 1;
+}
+

@@ -1,22 +1,39 @@
-import { useContext} from "react";
-import Button from "./sui-library/src/button/button.jsx";
+import { useContext, useState } from "react";
+import Button from "./sui-library/src/button";
 import { ThemeContext } from "./sui-library/src/themeContextProvider/themeContextProvider"
-import Typography from "./sui-library/src/typography/typography.jsx";
+import Typography from "./sui-library/src/typography";
 import SplightRounded from "./sui-library/src/icons/splightRounded.jsx";
 import SplightName from "./sui-library/src/icons/splightName.jsx";
-import Avatar from "./sui-library/src/avatar/avatar.jsx";
+import Avatar from "./sui-library/src/avatar";
+import SwitchTest from "./components/switchTest";
+import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import "./App.css";
 
 function App() {
   const { setTheme } = useContext(ThemeContext);
+  const [selectedLang, setSelectedLang] = useState({name:'en', id:2})
+  const handle = (lang) => {
+    setSelectedLang(lang);
+  }
+  const languages = [{name:'en', id:1}, {name:'sp', id:2}, {name:'pr', id:3}]
   return (
     <div className="App">
-        <Button onClick={setTheme}>invite user</Button><hr/>
-        <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
-        <SplightRounded/>
-        <SplightName/>
-        <Popover  displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
+       <div className='App__buttons'>
+          <Button onClick={setTheme}>invite user</Button>
+          <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
+       </div>
+       <div className='App__Switch'>
+          <SwitchTest />
+       </div>
+        <div className='App__Icons'>
+          <SplightRounded/>
+          <SplightName/>
+        </div>
+        <div className='App__SelectLang'>
+         <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages}/>
+        </div>
+        <Popover position="left" displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
           name="Thomas "
         />

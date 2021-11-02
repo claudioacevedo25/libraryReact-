@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 15px;
 }
 
 .App__labels {
@@ -12,11 +12,11 @@
   flex-direction: column;
 }
 
-.App__labels:nth-last-child(){
-  font-size: 30px;
-}
-
 .App__avatar {
   display: flex;
   flex-direction: row;
+}
+
+.App__SelectLang {
+  margin: 8px;
 }

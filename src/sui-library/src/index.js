@@ -1,13 +1,15 @@
-import Button from "./button/button.jsx";
-import Typography from "./typography/typography.jsx";
+import Button from "./button";
+import Typography from "./typography";
 import SplightNameIcon from "./icons/splightName.jsx";
 import SplightRoundedIcon from "./icons/splightRounded.jsx";
-import Avatar from "./avatar/avatar.jsx";
+import Avatar from "./avatar";
+import ToggleSwitch from "./switch";
+import SelectLang from "./selectLang";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './ThemeContextProvider/theme.js'
 
-// eslint-disable-next-line import/no-anonymous-default-export
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { 
     Avatar,
     Button, 
@@ -16,5 +18,7 @@ export default {
     ThemeContext, 
     theme,
     SplightRoundedIcon,
-    SplightNameIcon
+    SplightNameIcon,
+    ToggleSwitch,
+    SelectLang,
  };

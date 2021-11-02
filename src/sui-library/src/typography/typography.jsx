@@ -1,8 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "./typography.css";
 
-const Typography = ({ variant = "h3", color, size, className, ...props }) => {
-  const { children } = props;
+const Typography = ({ variant, color, size, className, children }) => {
 
   return (
     <label
@@ -12,6 +12,19 @@ const Typography = ({ variant = "h3", color, size, className, ...props }) => {
       {children}
     </label>
   );
+};
+
+Typography.defaultProps = {
+  variant : "h3",
+  children:{},
+};
+
+Typography.propTypes = {
+  variant: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  size: PropTypes.string,
+  children: PropTypes.object.isRequired,
+  className: PropTypes.string,
 };
 
 export default Typography;
