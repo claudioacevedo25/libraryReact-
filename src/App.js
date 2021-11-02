@@ -37,7 +37,7 @@ function App() {
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
           name="Thomas "
         />
-        <Typography variant="h3">Daniel moore kfjdksjkas</Typography>
+        <Typography variant="h3">Daniel moore</Typography>
         <Button >My Profile</Button>
         </Popover>
       <div className="App__labels">
