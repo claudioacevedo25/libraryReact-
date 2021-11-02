@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./popover.css";
 
-const Popover = ({ view, open, displayLabel, ...props }) => {
+const Popover = ({ view, open, displayLabel,position, ...props }) => {
   const ref = useRef()
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
   const { children } = props;
@@ -33,6 +33,7 @@ const Popover = ({ view, open, displayLabel, ...props }) => {
         onClick={() => setIsPopoverOpen(!isPopoverOpen)}
       >
         {displayLabel}
+        
       </div>
       <div className={`popover__content`}>{children}</div>
     </div>

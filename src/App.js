@@ -16,7 +16,7 @@ function App() {
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button><hr/>
         <SplightRounded/>
         <SplightName/>
-        <Popover displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
+        <Popover  displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
           name="Thomas "
         />
