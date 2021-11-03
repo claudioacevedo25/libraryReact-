@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Typography from "../typography";
 import SplightNameIcon from "../icons/splightName";
-import Avatar from "../avatar";
 import "./header.css";
 
-const Header = ({ icon, pages, user, onClick, currentPage }) => {
+const Header = ({ className, icon, pages, user, onClick, currentPage }) => {
 
     return (
-        <nav className="navbar__container">
+        <nav className={`${className} navbar__container`}>
             <div className="navbar__icon">
                 {icon}
             </div>
@@ -30,11 +29,8 @@ const Header = ({ icon, pages, user, onClick, currentPage }) => {
                 </ul>
 
             </div>
-            <div className="navbar__users">
-                <Avatar
-                    src={user.src}
-                    name={user.name}
-                />
+            <div className="navbar__user">
+                {user}
             </div>
         </nav>
     );
@@ -43,12 +39,13 @@ const Header = ({ icon, pages, user, onClick, currentPage }) => {
 Header.defaultProps = {
     icon: <SplightNameIcon />,
     pages: [],
-    user: {},
+    user: <></>,
     onClick: () => { },
     currentPage: {id:1}
 };
 
 Header.propTypes = {
+    className: PropTypes.string,
     icon: PropTypes.string.isRequired,
     pages: PropTypes.array.isRequired,
     user: PropTypes.object.isRequired,
