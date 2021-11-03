@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 
 .App__labels {
@@ -16,6 +17,6 @@
   flex-direction: row;
 }
 
-div {
+.App__SelectLang {
   margin: 8px;
 }

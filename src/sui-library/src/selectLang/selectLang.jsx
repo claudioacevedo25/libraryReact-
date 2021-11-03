@@ -39,6 +39,7 @@ SelectLang.propTypes = {
     selectedLang: PropTypes.object.isRequired,
     onClick: PropTypes.func.isRequired,
     languages: PropTypes.array.isRequired,
+    className: PropTypes.string,
   };
   
 

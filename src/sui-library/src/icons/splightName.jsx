@@ -25,6 +25,7 @@ SplightName.defaultProps = {
   
 SplightName.propTypes = {
     size: PropTypes.number.isRequired,
+    className: PropTypes.string,
 };
 
 export default SplightName;

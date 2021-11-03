@@ -7,6 +7,7 @@ import SplightName from "./sui-library/src/icons/splightName.jsx";
 import Avatar from "./sui-library/src/avatar";
 import SwitchTest from "./components/switchTest";
 import SelectLang from "./sui-library/src/selectLang";
+import Popover from "./sui-library/src/popover";
 import "./App.css";
 
 function App() {
@@ -32,6 +33,13 @@ function App() {
         <div className='App__SelectLang'>
          <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages}/>
         </div>
+        <Popover position="left" displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
+          src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
+          name="Thomas "
+        />
+        <Typography variant="h3">Daniel moore</Typography>
+        <Button >My Profile</Button>
+        </Popover>
       <div className="App__labels">
         <Typography variant="h1">Label h1</Typography>
         <Typography variant="h2">Label h2</Typography>
@@ -46,7 +54,9 @@ function App() {
         <Typography variant="body" color="red" size="1.8">
           Color and size
         </Typography>
+        <label>ultimo</label>
       </div>
+     
       <div className="App__avatar">
         <Avatar
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
@@ -54,6 +64,7 @@ function App() {
         />
         <Avatar name="Estrella cholod" />
       </div>
+      
     </div>
   );
 }

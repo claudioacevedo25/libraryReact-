@@ -19,6 +19,7 @@ SplightRounded.defaultProps = {
   
 SplightRounded.propTypes = {
     size: PropTypes.number.isRequired,
+    className: PropTypes.string,
 };
 
 

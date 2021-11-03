@@ -5,6 +5,7 @@ import SplightRoundedIcon from "./icons/splightRounded.jsx";
 import Avatar from "./avatar";
 import ToggleSwitch from "./switch";
 import SelectLang from "./selectLang";
+import Popover from "./popover";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './ThemeContextProvider/theme.js'
 
@@ -21,4 +22,5 @@ export default {
     SplightNameIcon,
     ToggleSwitch,
     SelectLang,
+    Popover,
  };
