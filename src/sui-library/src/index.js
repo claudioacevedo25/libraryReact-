@@ -6,7 +6,7 @@ import Avatar from "./avatar";
 import ToggleSwitch from "./switch";
 import SelectLang from "./selectLang";
 import Popover from "./popover";
-import Header from "./header/header";
+import Header from "./header";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './ThemeContextProvider/theme.js'
 

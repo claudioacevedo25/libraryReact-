@@ -8,7 +8,7 @@ import Avatar from "./sui-library/src/avatar";
 import SwitchTest from "./components/switchTest";
 import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
-import Header from "./sui-library/src/header/header";
+import Header from "./sui-library/src/header";
 import "./App.css";
 
 const languages = [{ name: 'en', id: 1 }, { name: 'sp', id: 2 }, { name: 'pr', id: 3 }];
