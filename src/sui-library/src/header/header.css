@@ -1,0 +1,31 @@
+.navbar__container{
+    display: flex;
+    background-color: rgb(var(--secondary));
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px 2px 10px;
+}
+
+.navbar__icon {
+    margin: 0;
+}
+
+.navbar__pages__wrapper {
+    display: flex;
+    margin: auto;
+    list-style: none;
+}
+
+.navbar__pages__item {
+    margin-right: 2.25rem;
+    opacity: 60%;
+}
+
+.navbar__pages__item label {
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.navbar__pages__item--active {
+    opacity: 1;
+}
