@@ -48,13 +48,13 @@ const Popover = ({ displayLabel, position, children, className }) => {
 Popover.defaultProps = {
   displayLabel: {},
   position: "right",
-  children: {},
+  children:[]
 };
 
 Popover.propTypes = {
   displayLabel: PropTypes.object.isRequired,
   position: PropTypes.string,
-  children: PropTypes.object.isRequired,
+  children: PropTypes.array.isRequired,
   className: PropTypes.string,
 };
 

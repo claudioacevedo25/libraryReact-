@@ -16,14 +16,14 @@ const Typography = ({ variant, color, size, className, children }) => {
 
 Typography.defaultProps = {
   variant : "h3",
-  children:{},
+  children:"",
 };
 
 Typography.propTypes = {
   variant: PropTypes.string.isRequired,
   color: PropTypes.string,
-  size: PropTypes.string,
-  children: PropTypes.object.isRequired,
+  size: PropTypes.number,
+  children: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
 
