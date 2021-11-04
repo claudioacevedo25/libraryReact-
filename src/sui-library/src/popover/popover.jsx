@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import PropTypes from "prop-types";
 import "./popover.css";
 
 const Popover = ({ displayLabel, position, children, className }) => {
@@ -33,11 +32,10 @@ const Popover = ({ displayLabel, position, children, className }) => {
         {displayLabel}
       </div>
       <div
-        className={`popover__content ${
-          position === "left"
+        className={`popover__content ${position === "left"
             ? "popover__content--left"
             : "popover__content--right"
-        }`}
+          }`}
       >
         {children}
       </div>
@@ -48,14 +46,7 @@ const Popover = ({ displayLabel, position, children, className }) => {
 Popover.defaultProps = {
   displayLabel: {},
   position: "right",
-  children:[]
-};
-
-Popover.propTypes = {
-  displayLabel: PropTypes.object.isRequired,
-  position: PropTypes.string,
-  children: PropTypes.array.isRequired,
-  className: PropTypes.string,
+  children: []
 };
 
 export default Popover;

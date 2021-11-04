@@ -1,6 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import Typography from "../typography/typography";
+import Typography from "../typography/typography.jsx";
 import "./avatar.css";
 
 const Avatar = ({ src, name, className }) => {
@@ -18,13 +17,7 @@ const Avatar = ({ src, name, className }) => {
 };
 
 Avatar.defaultProps = {
-  name:'',
-};
-
-Avatar.propTypes = {
-  src: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  name: '',
 };
 
 export default Avatar;
