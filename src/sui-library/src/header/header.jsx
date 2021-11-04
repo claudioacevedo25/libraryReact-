@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import Typography from "../typography";
-import SplightNameIcon from "../icons/splightName";
+import Typography from "../typography/typography.jsx";
+import SplightNameIcon from "../icons/splightName.jsx";
 import "./header.css";
 
 const Header = ({ className, icon, pages, user, onClick, currentPage }) => {
@@ -18,7 +17,7 @@ const Header = ({ className, icon, pages, user, onClick, currentPage }) => {
                             <li
                                 className={`navbar__pages__item ${page.id === currentPage.id && 'navbar__pages__item--active'}`}
                                 key={index}
-                                onClick={()=> onClick(page)}
+                                onClick={() => onClick(page)}
                             >
                                 <Typography variant={`${page.id === currentPage.id ? 'bodyBold' : 'body'}`}>
                                     {page.name}
@@ -41,18 +40,7 @@ Header.defaultProps = {
     pages: [],
     user: <></>,
     onClick: () => { },
-    currentPage: {id:1}
+    currentPage: { id: 1 }
 };
-
-Header.propTypes = {
-    className: PropTypes.string,
-    icon: PropTypes.string.isRequired,
-    pages: PropTypes.array.isRequired,
-    user: PropTypes.object.isRequired,
-    onClick: PropTypes.func,
-    currentPage: PropTypes.number.isRequired,
-}
-
-
 
 export default Header;

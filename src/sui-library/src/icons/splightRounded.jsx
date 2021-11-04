@@ -1,12 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types';
 import Icon from './assets/splightRounded.svg';
 
-const SplightRounded = ({className, size}) => {
+const SplightRounded = ({ className, size }) => {
     return (
-        <img 
-            style={{width:`${size}px`, height:`${size}px`}}
-            alt='splight' 
+        <img
+            style={{ width: `${size}px`, height: `${size}px` }}
+            alt='splight'
             src={Icon}
             className={className}
         />
@@ -15,12 +14,6 @@ const SplightRounded = ({className, size}) => {
 
 SplightRounded.defaultProps = {
     size: 60,
-  };
-  
-SplightRounded.propTypes = {
-    size: PropTypes.number.isRequired,
-    className: PropTypes.string,
 };
-
 
 export default SplightRounded;

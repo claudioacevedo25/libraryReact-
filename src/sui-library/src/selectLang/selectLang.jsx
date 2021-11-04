@@ -1,28 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '../typography/typography.jsx';
 import './selectLang.css';
 
+const SelectLang = ({ className, languages, onClick, selectedLang }) => {
 
-const SelectLang = ({className, languages, onClick, selectedLang}) => {
-    
     return (
         <div className='selectLangComponent'>
             {
-                languages.map((lang, index) => 
-                  
-                    <button 
+                languages.map((lang, index) =>
+
+                    <button
                         key={index}
                         className={`${className} selectLangButton`}
-                        onClick={()=> onClick(lang)}
+                        onClick={() => onClick(lang)}
                     >
-                       <span className={`addPiped ${selectedLang.id === lang.id && "selectLangButton--active" }`}>
-                           <Typography  variant='textButton' size={0.6}>
+                        <span className={`addPiped ${selectedLang.id === lang.id && "selectLangButton--active"}`}>
+                            <Typography variant='textButton' size={0.6}>
                                 {lang.name}
-                           </Typography>
-                       </span>
+                            </Typography>
+                        </span>
                     </button>
-                   
+
                 )
             }
         </div>
@@ -30,17 +28,9 @@ const SelectLang = ({className, languages, onClick, selectedLang}) => {
 };
 
 SelectLang.defaultProps = {
-    selectedLang: {id:1},
-    onClick:()=>{},
-    languages:[],
-  };
-  
-SelectLang.propTypes = {
-    selectedLang: PropTypes.object.isRequired,
-    onClick: PropTypes.func.isRequired,
-    languages: PropTypes.array.isRequired,
-    className: PropTypes.string,
-  };
-  
+    selectedLang: { id: 1 },
+    onClick: () => { },
+    languages: [],
+};
 
 export default SelectLang;

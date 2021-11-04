@@ -1,14 +1,14 @@
-import Button from "./button";
-import Typography from "./typography";
+import Button from "./button/button.jsx";
+import Typography from "./typography/typography.jsx";
 import SplightNameIcon from "./icons/splightName.jsx";
 import SplightRoundedIcon from "./icons/splightRounded.jsx";
-import Avatar from "./avatar";
-import ToggleSwitch from "./switch";
-import SelectLang from "./selectLang";
-import Popover from "./popover";
-import Header from "./header";
+import Avatar from "./avatar/avatar.jsx";
+import ToggleSwitch from "./switch/toggleSwitch.jsx";
+import SelectLang from "./selectLang/selectLang.jsx";
+import Popover from "./popover/popover.jsx";
+import Header from "./header/header.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
-import theme from './ThemeContextProvider/theme.js'
+import theme from './themeContextProvider/theme.js';
 
 
 // eslint-disable-next-line import/no-anonymous-default-export

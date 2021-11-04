@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Typography from '../typography/typography';
+import Typography from '../typography/typography.jsx';
 import './button.css';
 
-const Button = ({className, onClick, variant, ...props}) => {
+const Button = ({ className, onClick, variant, ...props }) => {
   const { children } = props;
   return (
     <button
@@ -16,15 +15,8 @@ const Button = ({className, onClick, variant, ...props}) => {
 };
 
 Button.defaultProps = {
-  onClick:()=>{},
+  onClick: () => { },
   variant: 'normal',
 };
-
-Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  variant: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
-
 
 export default Button;
