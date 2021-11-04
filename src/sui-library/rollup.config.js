@@ -1,8 +1,10 @@
 import styles from "rollup-plugin-styles";
-const autoprefixer = require("autoprefixer");
+import url from '@rollup/plugin-url';
 // import { terser } from 'rollup-plugin-terser';
 import babel from "@rollup/plugin-babel";
 import sourcemaps from "rollup-plugin-sourcemaps";
+const autoprefixer = require("autoprefixer");
+const svgr = require('@svgr/rollup').default;
 
 // the entry point for the library
 const input = "src/index.js";
@@ -35,6 +37,8 @@ MODE.map((m) => {
     // this externelizes react to prevent rollup from compiling it
     external: ["react", /@babel\/runtime/],
     plugins: [
+      url(),
+      svgr(),
       // these are babel comfigurations
       babel({
         exclude: "node_modules/**",

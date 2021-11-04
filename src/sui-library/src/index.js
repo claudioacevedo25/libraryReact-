@@ -8,7 +8,7 @@ import SelectLang from "./selectLang/selectLang.jsx";
 import Popover from "./popover/popover.jsx";
 import Header from "./header/header.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
-import theme from './ThemeContextProvider/theme.js'
+import theme from './themeContextProvider/theme.js';
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
