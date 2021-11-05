@@ -1,0 +1,24 @@
+.spinner__component {
+    position: fixed;
+    top: 0px; 
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner__sm {
+    transform: scale(0.040);
+}
+
+.spinner__md {
+    transform: scale(0.070);
+}
+
+.spinner__lg {
+    transform: scale(0.1);
+}

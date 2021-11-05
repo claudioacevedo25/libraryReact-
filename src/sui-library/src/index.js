@@ -7,6 +7,7 @@ import ToggleSwitch from "./switch/toggleSwitch.jsx";
 import SelectLang from "./selectLang/selectLang.jsx";
 import Popover from "./popover/popover.jsx";
 import Header from "./header/header.jsx";
+import Spinner from "./spinner/spinner.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './themeContextProvider/theme.js';
 
@@ -25,4 +26,5 @@ export default {
     SelectLang,
     Popover,
     Header,
+    Spinner,
  };

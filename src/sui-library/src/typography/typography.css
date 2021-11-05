@@ -17,38 +17,44 @@
 }
 
 .typography__h3 {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.typography__h4 {
+  font-size: 0.875rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
 .typography__subtitle {
-  font-size: 1.1rem;
+  font-size: 0.75rem;
 }
 
 .typography__body {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 140%;
 }
 
 .typography__bodyBold {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: bold;
   line-height: 140%;
 }
 
 .typography__small {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
 }
 
 .typography__preTitle {
-  font-size: 0.6rem;
+  font-size: 0.625rem;
   font-weight: bold;
   letter-spacing: 0.02rem;
 }
 
 .typography__textButton {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
 }

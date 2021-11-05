@@ -12,8 +12,8 @@ var _slicedToArray__default = /*#__PURE__*/_interopDefaultLegacy(_slicedToArray)
 
 var e=[],t=[];function n(n,r){if(n&&"undefined"!=typeof document){var a,s=!0===r.prepend?"prepend":"append",d=!0===r.singleTag,i="string"==typeof r.container?document.querySelector(r.container):document.getElementsByTagName("head")[0];if(d){var u=e.indexOf(i);-1===u&&(u=e.push(i)-1,t[u]={}),a=t[u]&&t[u][s]?t[u][s]:t[u][s]=c();}else a=c();65279===n.charCodeAt(0)&&(n=n.substring(1)),a.styleSheet?a.styleSheet.cssText+=n:a.appendChild(document.createTextNode(n));}function c(){var e=document.createElement("style");if(e.setAttribute("type","text/css"),r.attributes)for(var t=Object.keys(r.attributes),n=0;n<t.length;n++)e.setAttribute(t[n],r.attributes[t[n]]);var a="prepend"===s?"afterbegin":"beforeend";return i.insertAdjacentElement(a,e),e}}
 
-var css$7 = ".typography {\n  color: rgb(var(--color1));\n  font-family: \"Open Sans\", sans-serif;\n}\n\n.typography__h1 {\n  font-weight: normal;\n  font-size: 2.5rem;\n  letter-spacing: 0.25rem;\n  text-transform: uppercase;\n}\n\n.typography__h2 {\n  font-size: 1.2rem;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n}\n\n.typography__h3 {\n  font-size: 0.9rem;\n  letter-spacing: 0.2rem;\n  text-transform: uppercase;\n}\n\n.typography__subtitle {\n  font-size: 1.1rem;\n}\n\n.typography__body {\n  font-size: 1rem;\n  line-height: 140%;\n}\n\n.typography__bodyBold {\n  font-size: 1rem;\n  font-weight: bold;\n  line-height: 140%;\n}\n\n.typography__small {\n  font-size: 0.6rem;\n}\n\n.typography__preTitle {\n  font-size: 0.6rem;\n  font-weight: bold;\n  letter-spacing: 0.02rem;\n}\n\n.typography__textButton {\n  font-size: 0.8rem;\n  font-weight: 600;\n  text-transform: uppercase;\n}\n";
-n(css$7,{});
+var css$8 = ".typography {\n  color: rgb(var(--color1));\n  font-family: \"Open Sans\", sans-serif;\n}\n\n.typography__h1 {\n  font-weight: normal;\n  font-size: 2.5rem;\n  letter-spacing: 0.25rem;\n  text-transform: uppercase;\n}\n\n.typography__h2 {\n  font-size: 1.2rem;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n}\n\n.typography__h3 {\n  font-size: 1rem;\n  letter-spacing: 0.2rem;\n  text-transform: uppercase;\n}\n\n.typography__h4 {\n  font-size: 0.875rem;\n  letter-spacing: 0.2rem;\n  text-transform: uppercase;\n}\n\n.typography__subtitle {\n  font-size: 0.75rem;\n}\n\n.typography__body {\n  font-size: 0.875rem;\n  line-height: 140%;\n}\n\n.typography__bodyBold {\n  font-size: 0.875rem;\n  font-weight: bold;\n  line-height: 140%;\n}\n\n.typography__small {\n  font-size: 0.75rem;\n}\n\n.typography__preTitle {\n  font-size: 0.625rem;\n  font-weight: bold;\n  letter-spacing: 0.02rem;\n}\n\n.typography__textButton {\n  font-size: 0.75rem;\n  font-weight: 600;\n  text-transform: uppercase;\n}\n";
+n(css$8,{});
 
 var Typography = function Typography(_ref) {
   var variant = _ref.variant,
@@ -35,8 +35,8 @@ Typography.defaultProps = {
   children: ""
 };
 
-var css$6 = ".buttonComponent {\n  border-radius: 19px;\n  padding: 10px 25px;\n  cursor: pointer;\n  border: 1px solid #000;\n  color:rgb(var(--color1));\n}\n\n.buttonComponent:hover {\n  background-color: rgba(var(--color1), 0.20);\n}\n\n.buttonComponent:active {\n  background-color: rgb(var(--color1));\n  color:rgb(var(--primary));\n}\n\n.buttonComponent__normal{\n  background-color: rgb(var(--primary));\n}\n\n.buttonComponent__alternate{\n  background-color:rgb(var(--secondary)) ;\n}\n";
-n(css$6,{});
+var css$7 = ".buttonComponent {\n  border-radius: 19px;\n  padding: 10px 25px;\n  cursor: pointer;\n  border: 1px solid #000;\n  color:rgb(var(--color1));\n}\n\n.buttonComponent:hover {\n  background-color: rgba(var(--color1), 0.20);\n}\n\n.buttonComponent:active {\n  background-color: rgb(var(--color1));\n  color:rgb(var(--primary));\n}\n\n.buttonComponent__normal{\n  background-color: rgb(var(--primary));\n}\n\n.buttonComponent__alternate{\n  background-color:rgb(var(--secondary)) ;\n}\n";
+n(css$7,{});
 
 var _excluded = ["className", "onClick", "variant"];
 
@@ -60,8 +60,8 @@ Button.defaultProps = {
   variant: 'normal'
 };
 
-var css$5 = ".theme__context__provider[theme=\"light\"]{\n  --background: 250,250,250;\n  --primary: 243,243,246;\n  --secondary: 241,241,241;\n  --color1:0,0,0;\n  --hierarchy1:183,253,160;\n  --hierarchy2:69,215,188;\n  --hierarchy3:106,232,176;\n  background-color: rgb(250,250,250);\n  height: 100vh;\n  width: 100vw;\n}\n\n.theme__context__provider[theme=\"dark\"]{\n  --background: 0,0,0;\n  --primary: 27,28,33;\n  --secondary: 49,50,56;\n  --color1:255,255,255;\n  --hierarchy1:183,253,160;\n  --hierarchy2:69,215,188;\n  --hierarchy3:106,232,176;\n  background-color: rgb(0,0,0);\n  height: 100vh;\n  width: 100vw;\n}";
-n(css$5,{});
+var css$6 = ".theme__context__provider[theme=\"light\"]{\n  --background: 250,250,250;\n  --primary: 243,243,246;\n  --secondary: 241,241,241;\n  --color1:0,0,0;\n  --hierarchy1:183,253,160;\n  --hierarchy2:69,215,188;\n  --hierarchy3:106,232,176;\n  background-color: rgb(250,250,250);\n  height: 100vh;\n  width: 100vw;\n}\n\n.theme__context__provider[theme=\"dark\"]{\n  --background: 0,0,0;\n  --primary: 27,28,33;\n  --secondary: 49,50,56;\n  --color1:255,255,255;\n  --hierarchy1:183,253,160;\n  --hierarchy2:69,215,188;\n  --hierarchy3:106,232,176;\n  background-color: rgb(0,0,0);\n  height: 100vh;\n  width: 100vw;\n}";
+n(css$6,{});
 
 var ThemeContext = /*#__PURE__*/React.createContext();
 
@@ -139,8 +139,8 @@ SplightRounded.defaultProps = {
   size: 60
 };
 
-var css$4 = ".avatar {\n  border-radius: 3px;\n  width: 44px;\n  height: 44px;\n}\n\n.avatar__initials {\n  background-color: rgb(var(--background));\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-transform: uppercase;\n  border: rgba(var(--color1), 0.3) 2px solid;\n}\n";
-n(css$4,{});
+var css$5 = ".avatar {\n  border-radius: 3px;\n  width: 44px;\n  height: 44px;\n}\n\n.avatar__initials {\n  background-color: rgb(var(--background));\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-transform: uppercase;\n  border: rgba(var(--color1), 0.3) 2px solid;\n}\n";
+n(css$5,{});
 
 var Avatar = function Avatar(_ref) {
   var src = _ref.src,
@@ -162,8 +162,8 @@ Avatar.defaultProps = {
   name: ''
 };
 
-var css$3 = ".toggleSwitch {\n  position: relative;\n  width: 75px;\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  text-align: left;\n}\n\n.toggle__switch__checkbox {\n  display: none;\n}\n\n.toggle__switch__label {\n  display: block;\n  overflow: hidden;\n  cursor: pointer;\n  border: 0 solid #ccc;\n  border-radius: 20px;\n  margin: 0;\n}\n\n.toggle__switch__inner {\n  display: block;\n  width: 200%;\n  margin-left: -100%;\n  transition: margin 0.3s ease-in 0s;\n  transition: color 0.3s ease-in 0s;\n}\n\n.toggle__switch__inner::before,\n.toggle__switch__inner::after {\n  display: block;\n  float: left;\n  width: 50%;\n  height: 34px;\n  padding: 0;\n  line-height: 34px;\n  font-size: 14px;\n  font-weight: bold;\n  box-sizing: border-box;\n}\n\n.toggle__switch__inner:before {\n  content: \" \";\n  text-transform: uppercase;\n  padding-left: 10px;\n  background-color: rgb(var(--color1));\n  opacity: 40%;\n}\n\n.toggle__switch__inner[color]:before {\n  background-color: var(--onColor);\n  opacity: 1;\n}\n\n.toggle__switch__inner:after {\n  content: \" \";\n  text-transform: uppercase;\n  padding-left: 10px;\n  background-color: rgb(var(--color1));\n  opacity: 70%;\n  text-align: right;\n}\n\n.toggle__switch__switch {\n  display: block;\n  width: 24px;\n  margin: 5px;\n  background: white;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 40px;\n  border-radius: 20px;\n  transition: all 0.3s ease-in 0s;\n}\n\n.toggle__switch__checkbox:checked\n  + .toggle__switch__label\n  .toggle__switch__inner {\n  margin-left: 0;\n}\n\n.toggle__switch__checkbox:checked\n  + .toggle__switch__label\n  .toggle__switch__switch {\n  right: 0px;\n}\n\n.toggleSwitch.lg__switch {\n  width: 60px;\n  height: 30px;\n}\n\n.toggleSwitch.lg__switch .toggle__switch__inner:after,\n.toggleSwitch.lg__switch .toggle__switch__inner:before {\n  content: \"\";\n  height: 30px;\n  line-height: 30px;\n  border-radius: 30px;\n}\n\n.toggleSwitch.lg__switch .toggle__switch__switch {\n  width: 28px;\n  border-radius: 60px;\n  height: 26px;\n  right: 28px;\n  margin: 2px;\n}\n\n.toggleSwitch.md__switch {\n  width: 52px;\n}\n\n.toggleSwitch.md__switch .toggle__switch__inner:after,\n.toggleSwitch.md__switch .toggle__switch__inner:before {\n  content: \"\";\n  height: 25px;\n  line-height: 25px;\n  border-radius: 25px;\n}\n\n.toggleSwitch.md__switch .toggle__switch__switch {\n  width: 22px;\n  height: 22px;\n  border-radius: 25px;\n  right: 26px;\n  margin: 2px;\n}\n\n.toggleSwitch.sm__switch {\n  width: 40px;\n  height: 40px;\n}\n\n.toggleSwitch.sm__switch .toggle__switch__inner:after,\n.toggleSwitch.sm__switch .toggle__switch__inner:before {\n  content: \"\";\n  height: 20px;\n  line-height: 20px;\n}\n\n.toggleSwitch.sm__switch .toggle__switch__inner:after {\n  content: \"\";\n  height: 20px;\n  line-height: 20px;\n}\n\n.toggleSwitch.sm__switch .toggle__switch__switch {\n  width: 16px;\n  height: 16px;\n  right: 20px;\n  margin: 2px;\n}\n\n.toggle__switch__disabled .toggle__switch__inner {\n  background-color: rgba(var(--color1) , 0.2);\n  cursor: not-allowed;\n}\n\n.toggle__switch__disabled .toggle__switch__inner:after {\n  background-color: rgba(var(--color1) , 0.2);\n  cursor: not-allowed;\n}\n\n.toggle__switch__disabled .toggle__switch__inner:before {\n  background-color: rgba(var(--color1) , 0.2);\n  cursor: not-allowed;\n}\n\n.toggle__switch__disabled .toggle__switch__switch {\n  opacity: 20%;\n  cursor: not-allowed;\n}";
-n(css$3,{});
+var css$4 = ".toggleSwitch {\n  position: relative;\n  width: 75px;\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  text-align: left;\n}\n\n.toggle__switch__checkbox {\n  display: none;\n}\n\n.toggle__switch__label {\n  display: block;\n  overflow: hidden;\n  cursor: pointer;\n  border: 0 solid #ccc;\n  border-radius: 20px;\n  margin: 0;\n}\n\n.toggle__switch__inner {\n  display: block;\n  width: 200%;\n  margin-left: -100%;\n  transition: margin 0.3s ease-in 0s;\n  transition: color 0.3s ease-in 0s;\n}\n\n.toggle__switch__inner::before,\n.toggle__switch__inner::after {\n  display: block;\n  float: left;\n  width: 50%;\n  height: 34px;\n  padding: 0;\n  line-height: 34px;\n  font-size: 14px;\n  font-weight: bold;\n  box-sizing: border-box;\n}\n\n.toggle__switch__inner:before {\n  content: \" \";\n  text-transform: uppercase;\n  padding-left: 10px;\n  background-color: rgb(var(--color1));\n  opacity: 40%;\n}\n\n.toggle__switch__inner[color]:before {\n  background-color: var(--onColor);\n  opacity: 1;\n}\n\n.toggle__switch__inner:after {\n  content: \" \";\n  text-transform: uppercase;\n  padding-left: 10px;\n  background-color: rgb(var(--color1));\n  opacity: 70%;\n  text-align: right;\n}\n\n.toggle__switch__switch {\n  display: block;\n  width: 24px;\n  margin: 5px;\n  background: white;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 40px;\n  border-radius: 20px;\n  transition: all 0.3s ease-in 0s;\n}\n\n.toggle__switch__checkbox:checked\n  + .toggle__switch__label\n  .toggle__switch__inner {\n  margin-left: 0;\n}\n\n.toggle__switch__checkbox:checked\n  + .toggle__switch__label\n  .toggle__switch__switch {\n  right: 0px;\n}\n\n.toggleSwitch.lg__switch {\n  width: 60px;\n  height: 30px;\n}\n\n.toggleSwitch.lg__switch .toggle__switch__inner:after,\n.toggleSwitch.lg__switch .toggle__switch__inner:before {\n  content: \"\";\n  height: 30px;\n  line-height: 30px;\n  border-radius: 30px;\n}\n\n.toggleSwitch.lg__switch .toggle__switch__switch {\n  width: 28px;\n  border-radius: 60px;\n  height: 26px;\n  right: 28px;\n  margin: 2px;\n}\n\n.toggleSwitch.md__switch {\n  width: 52px;\n}\n\n.toggleSwitch.md__switch .toggle__switch__inner:after,\n.toggleSwitch.md__switch .toggle__switch__inner:before {\n  content: \"\";\n  height: 25px;\n  line-height: 25px;\n  border-radius: 25px;\n}\n\n.toggleSwitch.md__switch .toggle__switch__switch {\n  width: 22px;\n  height: 22px;\n  border-radius: 25px;\n  right: 26px;\n  margin: 2px;\n}\n\n.toggleSwitch.sm__switch {\n  width: 40px;\n  height: 40px;\n}\n\n.toggleSwitch.sm__switch .toggle__switch__inner:after,\n.toggleSwitch.sm__switch .toggle__switch__inner:before {\n  content: \"\";\n  height: 20px;\n  line-height: 20px;\n}\n\n.toggleSwitch.sm__switch .toggle__switch__inner:after {\n  content: \"\";\n  height: 20px;\n  line-height: 20px;\n}\n\n.toggleSwitch.sm__switch .toggle__switch__switch {\n  width: 16px;\n  height: 16px;\n  right: 20px;\n  margin: 2px;\n}\n\n.toggle__switch__disabled .toggle__switch__inner {\n  background-color: rgba(var(--color1) , 0.2);\n  cursor: not-allowed;\n}\n\n.toggle__switch__disabled .toggle__switch__inner:after {\n  background-color: rgba(var(--color1) , 0.2);\n  cursor: not-allowed;\n}\n\n.toggle__switch__disabled .toggle__switch__inner:before {\n  background-color: rgba(var(--color1) , 0.2);\n  cursor: not-allowed;\n}\n\n.toggle__switch__disabled .toggle__switch__switch {\n  opacity: 20%;\n  cursor: not-allowed;\n}";
+n(css$4,{});
 
 var ToggleSwitch = function ToggleSwitch(_ref) {
   var className = _ref.className,
@@ -205,8 +205,8 @@ ToggleSwitch.defaultProps = {
   id: ''
 };
 
-var css$2 = ".selectLangComponent {\n    display: flex;\n    border-radius: 19px;\n    padding: 5px 11px;\n    border: 0.5px solid #000;\n    background-color: rgba(var(--primary));\n}\n\n.selectLangButton {\n    background-color: transparent;\n    border: none;\n    text-transform: uppercase;\n    color:rgb(var(--color1));\n    padding: 0;\n}\n\n.addPiped > label {\n    cursor: pointer;  \n    opacity: 30%;\n}\n\n.addPiped::after {\n    content: \"|\";\n    margin: 0 6px;\n}\n\n.selectLangButton:last-child > span:nth-child(1)::after{\n    content: '';\n    margin: 0;\n}\n\n.selectLangButton--active label {\n    opacity: 1;\n}\n\n";
-n(css$2,{});
+var css$3 = ".selectLangComponent {\n    display: flex;\n    border-radius: 19px;\n    padding: 5px 11px;\n    border: 0.5px solid #000;\n    background-color: rgba(var(--primary));\n}\n\n.selectLangButton {\n    background-color: transparent;\n    border: none;\n    text-transform: uppercase;\n    color:rgb(var(--color1));\n    padding: 0;\n}\n\n.addPiped > label {\n    cursor: pointer;  \n    opacity: 30%;\n}\n\n.addPiped::after {\n    content: \"|\";\n    margin: 0 6px;\n}\n\n.selectLangButton:last-child > span:nth-child(1)::after{\n    content: '';\n    margin: 0;\n}\n\n.selectLangButton--active label {\n    opacity: 1;\n}\n\n";
+n(css$3,{});
 
 var SelectLang = function SelectLang(_ref) {
   var className = _ref.className,
@@ -239,8 +239,8 @@ SelectLang.defaultProps = {
   languages: []
 };
 
-var css$1 = ".popover {\n  position: relative;\n  margin-top: 1.5rem;\n  display: inline-block;\n  cursor: pointer;\n}\n\n.popover--activo .popover__content {\n  display: flex;\n}\n\n.popover__content {\n  display: none;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  border-radius: 16px;\n  position: absolute;\n  z-index: 10;\n  border: rgba(var(--color1), 0.2) 0.2px solid;\n  background-color: rgb(var(--secondary));\n  padding: 1.5rem;\n  width: max-content;\n  transform: translate(0, 6px);\n  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);\n}\n\n.popover__content--left {\n  left: 0;\n}\n\n.popover__content--right {\n  right: 0;\n}\n";
-n(css$1,{});
+var css$2 = ".popover {\n  position: relative;\n  display: inline-block;\n  cursor: pointer;\n}\n\n.popover--activo .popover__content {\n  display: flex;\n}\n\n.popover__content {\n  display: none;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  border-radius: 16px;\n  position: absolute;\n  z-index: 10;\n  border: rgba(var(--color1), 0.2) 0.2px solid;\n  background-color: rgb(var(--secondary));\n  padding: 1.5rem;\n  width: max-content;\n  transform: translate(0, 6px);\n  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);\n}\n\n.popover__content--left {\n  left: 0;\n}\n\n.popover__content--right {\n  right: 0;\n}\n";
+n(css$2,{});
 
 var Popover = function Popover(_ref) {
   var displayLabel = _ref.displayLabel,
@@ -288,8 +288,8 @@ Popover.defaultProps = {
   children: []
 };
 
-var css = ".navbar__container{\n    display: flex;\n    background-color: rgb(var(--secondary));\n    justify-content: space-between;\n    align-items: center;\n    padding: 8px 30px 2px 10px;\n}\n\n.navbar__icon {\n    margin: 0;\n}\n\n.navbar__pages__wrapper {\n    display: flex;\n    margin: auto;\n    list-style: none;\n}\n\n.navbar__pages__item {\n    margin-right: 2.25rem;\n    opacity: 60%;\n}\n\n.navbar__pages__item label {\n    cursor: pointer;\n    text-transform: capitalize;\n}\n\n.navbar__pages__item--active {\n    opacity: 1;\n}";
-n(css,{});
+var css$1 = ".navbar__container{\n    display: flex;\n    background-color: rgb(var(--secondary));\n    justify-content: space-between;\n    align-items: center;\n    padding: 8px 30px 2px 10px;\n    position: fixed;\n    top: 0; \n    width: 100%;\n    z-index: 1;\n}\n\n.navbar__icon {\n    margin: 0;\n}\n\n.navbar__pages__wrapper {\n    display: flex;\n    margin: auto;\n    list-style: none;\n}\n\n.navbar__pages__item {\n    margin-right: 2.25rem;\n    opacity: 60%;\n}\n\n.navbar__pages__item label {\n    cursor: pointer;\n    text-transform: capitalize;\n}\n\n.navbar__pages__item--active {\n    opacity: 1;\n}";
+n(css$1,{});
 
 var Header = function Header(_ref) {
   var className = _ref.className,
@@ -331,6 +331,28 @@ Header.defaultProps = {
   }
 };
 
+var srcSpinner = "f4de1880835da671.gif";
+
+var css = ".spinner__component {\n    position: fixed;\n    top: 0px; \n    left: 0px;\n    width: 100vw;\n    height: 100vh;\n    background-color: rgba(255,255,255, 0.7);\n    z-index: 1000;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.spinner__sm {\n    transform: scale(0.040);\n}\n\n.spinner__md {\n    transform: scale(0.070);\n}\n\n.spinner__lg {\n    transform: scale(0.1);\n}";
+n(css,{});
+
+var Spinner = function Spinner(_ref) {
+  var className = _ref.className,
+      size = _ref.size;
+  return /*#__PURE__*/React__default["default"].createElement("div", {
+    className: "spinner__component"
+  }, /*#__PURE__*/React__default["default"].createElement("img", {
+    className: "".concat(className, " spinner__").concat(size),
+    src: srcSpinner,
+    alt: ""
+  }));
+};
+
+Spinner.defaultProps = {
+  className: "",
+  size: "md"
+};
+
 var theme = {
   light: {
     background: '250,250,250',
@@ -364,7 +386,8 @@ var index = {
   ToggleSwitch: ToggleSwitch,
   SelectLang: SelectLang,
   Popover: Popover,
-  Header: Header
+  Header: Header,
+  Spinner: Spinner
 };
 
 module.exports = index;
