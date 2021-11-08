@@ -9,6 +9,7 @@ import SwitchTest from "./components/switchTest";
 import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
+import Spinner from "./sui-library/src/spinner";
 import "./App.css";
 
 const languages = [{ name: 'en', id: 1 }, { name: 'sp', id: 2 }, { name: 'pr', id: 3 }];
@@ -22,6 +23,7 @@ function App() {
   const { setTheme } = useContext(ThemeContext);
   const [selectedLang, setSelectedLang] = useState(languages[0]);
   const [currentPage, setCurrentPage] = useState(pages[0]);
+  const isLoading = false; //turn on true to test Spinner component
 
   const handle = (lang) => {
     setSelectedLang(lang);
@@ -32,10 +34,11 @@ function App() {
 
 
   return (
-    <>
+    <> 
+    {isLoading && <Spinner/>}
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
-
+        
         <div className='App__buttons'>
           <Button onClick={setTheme}>invite user</Button>
           <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
