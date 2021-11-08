@@ -288,7 +288,7 @@ Popover.defaultProps = {
   children: []
 };
 
-var css$1 = ".navbar__container{\n    display: flex;\n    background-color: rgb(var(--secondary));\n    justify-content: space-between;\n    align-items: center;\n    padding: 8px 30px 2px 10px;\n    position: fixed;\n    top: 0; \n    width: 100%;\n    z-index: 1;\n}\n\n.navbar__icon {\n    margin: 0;\n}\n\n.navbar__pages__wrapper {\n    display: flex;\n    margin: auto;\n    list-style: none;\n}\n\n.navbar__pages__item {\n    margin-right: 2.25rem;\n    opacity: 60%;\n}\n\n.navbar__pages__item label {\n    cursor: pointer;\n    text-transform: capitalize;\n}\n\n.navbar__pages__item--active {\n    opacity: 1;\n}";
+var css$1 = ".navbar__container{\n    display: flex;\n    background-color: rgb(var(--secondary));\n    justify-content: space-between;\n    align-items: center;\n    padding: 8px 30px 2px 10px;\n    position: sticky;\n    top: 0; \n    width: 100%;\n    z-index: 1;\n}\n\n.navbar__icon {\n    margin: 0;\n}\n\n.navbar__pages__wrapper {\n    display: flex;\n    margin: auto;\n    list-style: none;\n}\n\n.navbar__pages__item {\n    margin-right: 2.25rem;\n    opacity: 60%;\n}\n\n.navbar__pages__item label {\n    cursor: pointer;\n    text-transform: capitalize;\n}\n\n.navbar__pages__item--active {\n    opacity: 1;\n}";
 n(css$1,{});
 
 var Header = function Header(_ref) {
