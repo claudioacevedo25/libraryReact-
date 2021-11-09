@@ -10,7 +10,7 @@ import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
 import Spinner from "./sui-library/src/spinner";
-import CardBasic from "./sui-library/src/cardBasic";
+import BasicCard from "./sui-library/src/basicCard/basicCard";
 import "./App.css";
 
 const languages = [{ name: 'en', id: 1 }, { name: 'sp', id: 2 }, { name: 'pr', id: 3 }];
@@ -39,7 +39,7 @@ function App() {
     {isLoading && <Spinner/>}
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
-      <CardBasic title="Digital Protection Manager" subtitle="Go Now" width="250" height="124" onClick={setTheme}/>
+      <BasicCard title="Digital Protection Manager" subtitle="Go Now" width="250" height="124" onClick={setTheme}/>
         <div className='App__buttons'>
           <Button onClick={setTheme}>invite user</Button>
           <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
