@@ -10,12 +10,14 @@ import Header from "./header/header.jsx";
 import Spinner from "./spinner/spinner.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './themeContextProvider/theme.js';
-
+import Tabs, {Tab} from './tab/tabs.jsx'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default { 
     Avatar,
-    Button, 
+    Button,
+    Tab,
+    Tabs,
     Typography, 
     ThemeContextProvider, 
     ThemeContext, 
