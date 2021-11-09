@@ -52,7 +52,7 @@ Button.defaultProps = {
   variant: 'normal'
 };
 
-var css$6 = ".theme__context__provider[theme=\"light\"]{\n  --background: 250,250,250;\n  --primary: 243,243,246;\n  --secondary: 241,241,241;\n  --color1:0,0,0;\n  --hierarchy1:183,253,160;\n  --hierarchy2:69,215,188;\n  --hierarchy3:106,232,176;\n  background-color: rgb(250,250,250);\n  height: 100vh;\n  width: 100vw;\n  display: flex;\n  flex-direction: column;\n}\n\n.theme__context__provider[theme=\"dark\"]{\n  --background: 0,0,0;\n  --primary: 27,28,33;\n  --secondary: 49,50,56;\n  --color1:255,255,255;\n  --hierarchy1:183,253,160;\n  --hierarchy2:69,215,188;\n  --hierarchy3:106,232,176;\n  background-color: rgb(0,0,0);\n  height: 100vh;\n  width: 100vw;\n  display: flex;\n  flex-direction: column;\n}";
+var css$6 = "\r\n.theme__context__provider{\r\n  height: 100vh;\r\n  width: 100vw;\r\n  display: flex;\r\n  flex-direction: column;\r\n  overflow: hidden;\r\n}\r\n\r\n.theme__context__provider[theme=\"light\"]{\r\n  --background: 250,250,250;\r\n  --primary: 243,243,246;\r\n  --secondary: 241,241,241;\r\n  --color1:0,0,0;\r\n  --hierarchy1:183,253,160;\r\n  --hierarchy2:69,215,188;\r\n  --hierarchy3:106,232,176;\r\n  background-color: rgb(250,250,250);\r\n}\r\n\r\n.theme__context__provider[theme=\"dark\"]{\r\n  --background: 0,0,0;\r\n  --primary: 27,28,33;\r\n  --secondary: 49,50,56;\r\n  --color1:255,255,255;\r\n  --hierarchy1:183,253,160;\r\n  --hierarchy2:69,215,188;\r\n  --hierarchy3:106,232,176;\r\n  background-color: rgb(0,0,0);\r\n}\r\n";
 n(css$6,{});
 
 var ThemeContext = /*#__PURE__*/createContext();
