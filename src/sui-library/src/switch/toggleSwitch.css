@@ -1,0 +1,177 @@
+.toggleSwitch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+}
+
+.toggle__switch__checkbox {
+  display: none;
+}
+
+.toggle__switch__label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #ccc;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.toggle__switch__inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+  transition: color 0.3s ease-in 0s;
+}
+
+.toggle__switch__inner::before,
+.toggle__switch__inner::after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 34px;
+  padding: 0;
+  line-height: 34px;
+  font-size: 14px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.toggle__switch__inner:before {
+  content: " ";
+  text-transform: uppercase;
+  padding-left: 10px;
+  background-color: rgb(var(--color1));
+  opacity: 40%;
+}
+
+.toggle__switch__inner[color]:before {
+  background-color: var(--onColor);
+  opacity: 1;
+}
+
+.toggle__switch__inner:after {
+  content: " ";
+  text-transform: uppercase;
+  padding-left: 10px;
+  background-color: rgb(var(--color1));
+  opacity: 70%;
+  text-align: right;
+}
+
+.toggle__switch__switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.toggle__switch__checkbox:checked
+  + .toggle__switch__label
+  .toggle__switch__inner {
+  margin-left: 0;
+}
+
+.toggle__switch__checkbox:checked
+  + .toggle__switch__label
+  .toggle__switch__switch {
+  right: 0px;
+}
+
+.toggleSwitch.lg__switch {
+  width: 60px;
+  height: 30px;
+}
+
+.toggleSwitch.lg__switch .toggle__switch__inner:after,
+.toggleSwitch.lg__switch .toggle__switch__inner:before {
+  content: "";
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+}
+
+.toggleSwitch.lg__switch .toggle__switch__switch {
+  width: 28px;
+  border-radius: 60px;
+  height: 26px;
+  right: 28px;
+  margin: 2px;
+}
+
+.toggleSwitch.md__switch {
+  width: 52px;
+}
+
+.toggleSwitch.md__switch .toggle__switch__inner:after,
+.toggleSwitch.md__switch .toggle__switch__inner:before {
+  content: "";
+  height: 25px;
+  line-height: 25px;
+  border-radius: 25px;
+}
+
+.toggleSwitch.md__switch .toggle__switch__switch {
+  width: 22px;
+  height: 22px;
+  border-radius: 25px;
+  right: 26px;
+  margin: 2px;
+}
+
+.toggleSwitch.sm__switch {
+  width: 40px;
+  height: 40px;
+}
+
+.toggleSwitch.sm__switch .toggle__switch__inner:after,
+.toggleSwitch.sm__switch .toggle__switch__inner:before {
+  content: "";
+  height: 20px;
+  line-height: 20px;
+}
+
+.toggleSwitch.sm__switch .toggle__switch__inner:after {
+  content: "";
+  height: 20px;
+  line-height: 20px;
+}
+
+.toggleSwitch.sm__switch .toggle__switch__switch {
+  width: 16px;
+  height: 16px;
+  right: 20px;
+  margin: 2px;
+}
+
+.toggle__switch__disabled .toggle__switch__inner {
+  background-color: rgba(var(--color1) , 0.2);
+  cursor: not-allowed;
+}
+
+.toggle__switch__disabled .toggle__switch__inner:after {
+  background-color: rgba(var(--color1) , 0.2);
+  cursor: not-allowed;
+}
+
+.toggle__switch__disabled .toggle__switch__inner:before {
+  background-color: rgba(var(--color1) , 0.2);
+  cursor: not-allowed;
+}
+
+.toggle__switch__disabled .toggle__switch__switch {
+  opacity: 20%;
+  cursor: not-allowed;
+}

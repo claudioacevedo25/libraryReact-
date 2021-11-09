@@ -1,0 +1,60 @@
+.typography {
+  color: rgb(var(--color1));
+  font-family: "Open Sans", sans-serif;
+}
+
+.typography__h1 {
+  font-weight: normal;
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
+
+.typography__h2 {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.typography__h3 {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.typography__h4 {
+  font-size: 0.875rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.typography__subtitle {
+  font-size: 0.75rem;
+}
+
+.typography__body {
+  font-size: 0.875rem;
+  line-height: 140%;
+}
+
+.typography__bodyBold {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 140%;
+}
+
+.typography__small {
+  font-size: 0.75rem;
+}
+
+.typography__preTitle {
+  font-size: 0.625rem;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+}
+
+.typography__textButton {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
