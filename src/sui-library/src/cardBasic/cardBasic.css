@@ -5,12 +5,12 @@
 
 .cardBasic__content {
   background-color: rgb(var(--primary));
-  width: 250px;
-  height: 124px;
+  width: max-content;
+  height: max-content;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align: center;
   border: double 1px transparent;
   background-image: linear-gradient(rgb(var(--primary)), rgb(var(--primary))),
     radial-gradient(

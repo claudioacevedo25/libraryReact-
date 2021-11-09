@@ -39,7 +39,7 @@ function App() {
     {isLoading && <Spinner/>}
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
-      <CardBasic title="Digital Protection Manager" subtitle="Go Now" onClick={setTheme}/>
+      <CardBasic title="Digital Protection Manager" subtitle="Go Now" width="250" height="124" onClick={setTheme}/>
         <div className='App__buttons'>
           <Button onClick={setTheme}>invite user</Button>
           <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
