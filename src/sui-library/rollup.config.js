@@ -1,10 +1,8 @@
 import styles from "rollup-plugin-styles";
 import url from '@rollup/plugin-url';
-// import { terser } from 'rollup-plugin-terser';
 import babel from "@rollup/plugin-babel";
 import sourcemaps from "rollup-plugin-sourcemaps";
 const autoprefixer = require("autoprefixer");
-const svgr = require('@svgr/rollup').default;
 
 // the entry point for the library
 const input = "src/index.js";
@@ -37,8 +35,10 @@ MODE.map((m) => {
     // this externelizes react to prevent rollup from compiling it
     external: ["react", /@babel\/runtime/],
     plugins: [
-      url(),
-      svgr(),
+      // limit on bytes the media files
+      url({
+        limit: 10000000,
+      }),
       // these are babel comfigurations
       babel({
         exclude: "node_modules/**",
