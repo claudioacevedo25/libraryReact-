@@ -6,36 +6,33 @@
   content: "";
   margin: -4px 20px 0;
   display: block;
-  border-bottom: 1px solid #dddddd;
 }
 
 .tabs__tab {
   text-decoration: none;
   display: inline-block;
-  padding: 16px;
+  padding: 8px;
   border: none;
   outline: none;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
   background: transparent;
-  color: rgba(0, 0, 0, 0.5);
-  margin: 4px;
+  color: rgba(var(--color1));
+  margin: auto;
   cursor: pointer;
 }
 
 .tabs__tab:hover {
-  color: rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.04);
+  color: rgba(var(--color1));
+  background-color: rgba(var(--primary));
 }
 
-.tabs__tab-active {
-  color: rgba(0, 0, 0, 0.8);
-}
 
 .tabs__tab-active:after {
   content: "";
   display: block;
   padding-top: 16px;
   margin-bottom: -16px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.74);
+  border-bottom: 2px solid rgba(var(--color1));
 }

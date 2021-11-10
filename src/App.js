@@ -10,6 +10,7 @@ import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
 import Spinner from "./sui-library/src/spinner";
+import Tabs,{ Tab } from "./sui-library/src/tab/tabs.jsx";
 import "./App.css";
 
 const languages = [{ name: 'en', id: 1 }, { name: 'sp', id: 2 }, { name: 'pr', id: 3 }];
@@ -38,22 +39,16 @@ function App() {
     {isLoading && <Spinner/>}
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
-        
-        <div className='App__buttons'>
-          <Button onClick={setTheme}>invite user</Button>
-          <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
-        </div>
-        <div className='App__Switch'>
+      <Tabs width='70vw'>
+      <Tab label="buttons" tabName='Buttons' height='50vh'>
+        <Button onClick={setTheme}>invite user</Button>
+        <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
+      </Tab>
+      <Tab label="switch" tabName='Switch' height='50vh'>
           <SwitchTest />
-        </div>
-        <div className='App__Icons'>
-          <SplightRounded />
-          <SplightName />
-        </div>
-        <div className='App__SelectLang'>
-          <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages} />
-        </div>
-        <div className="App__labels">
+      </Tab>
+      <Tab label="typography" tabName='Typography' height='50vh'>
+      <div className="App__labels">
           <Typography variant="h1">Label h1</Typography>
           <Typography variant="h2">Label h2</Typography>
           <Typography variant="h3">Label h3</Typography>
@@ -67,14 +62,16 @@ function App() {
           <Typography variant="body" color="red" size="1.8">
             Color and size
           </Typography>
-        </div>
-        <div className="App__avatar">
-          <Avatar
+      </div>
+      </Tab>
+      <Tab label="avatar" tabName='Avatar' height='50vh'>
+        <Avatar
             src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
             name="Thomas "
           />
           <Avatar name="Estrella cholod" />
-        </div>
+      </Tab>
+      <Tab label="popover" tabName='Popover' height='50vh'>
         <Popover position="left" displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
           name="Thomas "
@@ -82,6 +79,17 @@ function App() {
             <Typography variant="h3">Daniel moore</Typography>
             <Button >My Profile</Button>
         </Popover>
+      </Tab>
+      <Tab label="icons" tabName='Icons' height='50vh'>
+          <SplightRounded />
+          <SplightName />
+      </Tab>
+      <Tab label="selectLang" tabName='SelectLang' height='50vh'>
+        <div className='App__SelectLang'>
+          <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages} style={{width:'50px'}} />
+        </div>
+      </Tab>
+      </Tabs>
     </div>
     </>
   );
