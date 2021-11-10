@@ -15,6 +15,7 @@ const Typography = ({ variant, color, size, onClick, className, children }) => {
 };
 
 Typography.defaultProps = {
+  onClick: () => {},
   variant: "h3",
   children: "",
 };
