@@ -19,7 +19,7 @@ const UserCard = ({
       onClick={() => setViewAction(!viewAction)}
     >
         <div className={`userCard__body`}>
-      <div  style={{backgroundImage:url(image)}} className={`userCard__image`}>
+      <div  style={{backgroundImage:(image)}} className={`userCard__image`}>
         
       </div>
         <div className={`userCard__content`}>
