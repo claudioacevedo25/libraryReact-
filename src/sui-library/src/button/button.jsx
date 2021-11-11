@@ -6,7 +6,7 @@ const Button = ({ className, onClick, variant, ...props }) => {
   const { children } = props;
   return (
     <button
-      className={`${className} buttonComponent buttonComponent__${variant}`}
+      className={`buttonComponent buttonComponent__${variant} ${className}`}
       onClick={onClick}
     >
       <Typography variant='textButton'>{children}</Typography>
@@ -17,6 +17,7 @@ const Button = ({ className, onClick, variant, ...props }) => {
 Button.defaultProps = {
   onClick: () => { },
   variant: 'normal',
+  className: '',
 };
 
 export default Button;

@@ -5,7 +5,7 @@ import "./basicCard.css";
 const BasicCard = ({ className, onClick, title, subtitle, width, height }) => {
     
   return (
-    <div className={`${className} cardBasic`}>
+    <div className={`cardBasic ${className}`}>
       <div
         className="cardBasic__content"
         onClick={onClick}
@@ -31,6 +31,7 @@ const BasicCard = ({ className, onClick, title, subtitle, width, height }) => {
 BasicCard.defaultProps = {
   onClick: () => {},
   title: "",
+  className: "",
 };
 
 export default BasicCard;

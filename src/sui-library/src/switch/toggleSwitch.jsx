@@ -31,6 +31,7 @@ ToggleSwitch.defaultProps = {
   disabled: false,
   checked: false,
   id: '',
+  className: "",
 };
 
 export default ToggleSwitch;

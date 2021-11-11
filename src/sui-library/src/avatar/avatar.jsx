@@ -6,7 +6,7 @@ const Avatar = ({ src, name, className }) => {
   const surname = !!name && name.split(" ").pop();
 
   return src ? (
-    <img src={src} alt={name} className={`${className} avatar`} />
+    <img src={src} alt={name} className={`avatar ${className}`} />
   ) : (
     <div className={`${className} avatar avatar__initials`}>
       <Typography variant="bodyBold">
@@ -17,7 +17,8 @@ const Avatar = ({ src, name, className }) => {
 };
 
 Avatar.defaultProps = {
-  name: '',
+  name: "",
+  className: "",
 };
 
 export default Avatar;

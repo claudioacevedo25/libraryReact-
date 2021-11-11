@@ -6,7 +6,7 @@ const Spinner = ({ className, size }) => {
     return (
         <div className="spinner__component">
             <img
-                className={`${className} spinner__${size}`}
+                className={`spinner__${size} ${className}`}
                 src={srcSpinner}
                 alt=''
             />
