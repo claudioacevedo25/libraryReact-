@@ -6,7 +6,7 @@ import "./header.css";
 const Header = ({ className, icon, pages, user, onClick, currentPage }) => {
 
     return (
-        <nav className={`${className} navbar__container`}>
+        <nav className={`navbar__container ${className}`}>
             <div className="navbar__icon">
                 {icon}
             </div>
@@ -40,7 +40,8 @@ Header.defaultProps = {
     pages: [],
     user: <></>,
     onClick: () => { },
-    currentPage: { id: 1 }
+    currentPage: { id: 1 },
+    className: "",
 };
 
 export default Header;

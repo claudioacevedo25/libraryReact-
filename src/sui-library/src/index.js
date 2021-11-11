@@ -8,6 +8,7 @@ import SelectLang from "./selectLang/selectLang.jsx";
 import Popover from "./popover/popover.jsx";
 import Header from "./header/header.jsx";
 import Spinner from "./spinner/spinner.jsx";
+import BasicCard from "./basicCard/basicCard.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './themeContextProvider/theme.js';
 import Tabs, {Tab} from './tab/tabs.jsx'
@@ -29,4 +30,5 @@ export default {
     Popover,
     Header,
     Spinner,
+    BasicCard,
  };

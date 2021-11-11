@@ -11,6 +11,7 @@ import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
 import Spinner from "./sui-library/src/spinner";
 import Tabs,{ Tab } from "./sui-library/src/tab/tabs.jsx";
+import BasicCard from "./sui-library/src/basicCard/basicCard";
 import "./App.css";
 
 const languages = [{ name: 'en', id: 1 }, { name: 'sp', id: 2 }, { name: 'pr', id: 3 }];
@@ -45,7 +46,10 @@ function App() {
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
       </Tab>
       <Tab label="switch" tabName='Switch' height='50vh'>
+              <BasicCard title="Digital Protection Manager" subtitle="Go Now" width="250" height="124" onClick={setTheme}/>
+        <div className='App__Switch'>
           <SwitchTest />
+        </div>
       </Tab>
       <Tab label="typography" tabName='Typography' height='50vh'>
       <div className="App__labels">

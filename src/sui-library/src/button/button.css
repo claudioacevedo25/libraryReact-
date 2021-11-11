@@ -15,6 +15,10 @@
   color:rgb(var(--primary));
 }
 
+.buttonComponent:active label {
+  color:rgb(var(--background));
+}
+
 .buttonComponent__normal{
   background-color: rgb(var(--primary));
 }

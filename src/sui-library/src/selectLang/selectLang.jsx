@@ -11,7 +11,7 @@ const SelectLang = ({ className, languages, onClick, selectedLang }) => {
 
                     <button
                         key={index}
-                        className={`${className} selectLangButton`}
+                        className={`selectLangButton ${className}`}
                         onClick={() => onClick(lang)}
                     >
                         <span className={`addPiped ${selectedLang.id === lang.id && "selectLangButton--active"}`}>
@@ -31,6 +31,7 @@ SelectLang.defaultProps = {
     selectedLang: { id: 1 },
     onClick: () => { },
     languages: [],
+    className: "",
 };
 
 export default SelectLang;
