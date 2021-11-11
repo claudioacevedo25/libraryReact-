@@ -39,9 +39,9 @@ function App() {
     {isLoading && <Spinner/>}
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
-      <Tabs width='70vw'>
+      <Tabs width='90vw' lastElement={<input type='text'></input>}>
       <Tab label="buttons" tabName='Buttons' height='50vh'>
-        <Button onClick={setTheme}>invite user</Button>
+        <Button onClick={()=>{setTheme('dark')}}>invite user</Button>
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
       </Tab>
       <Tab label="switch" tabName='Switch' height='50vh'>
@@ -84,7 +84,7 @@ function App() {
           <SplightRounded />
           <SplightName />
       </Tab>
-      <Tab label="selectLang" tabName='SelectLang' height='50vh'>
+      <Tab label="selectLang" tabName='SelectLang' height='50vh' disabled>
         <div className='App__SelectLang'>
           <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages} style={{width:'50px'}} />
         </div>

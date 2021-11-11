@@ -68,16 +68,23 @@ var ThemeContext = /*#__PURE__*/React.createContext();
 var ThemeContextProvider = function ThemeContextProvider(_ref) {
   var children = _ref.children,
       onThemeChange = _ref.onThemeChange,
-      initialTheme = _ref.initialTheme;
+      _ref$initialTheme = _ref.initialTheme,
+      initialTheme = _ref$initialTheme === void 0 ? 'dark' : _ref$initialTheme;
 
   var _useState = React.useState(initialTheme),
       _useState2 = _slicedToArray__default["default"](_useState, 2),
       mode = _useState2[0],
       setTheme = _useState2[1];
 
-  var toggleTheme = function toggleTheme() {
+  var toggleTheme = function toggleTheme(theme) {
     onThemeChange && onThemeChange();
-    setTheme(mode === "dark" ? "light" : "dark");
+
+    if (!theme || typeof theme !== 'string') {
+      setTheme(mode === "dark" ? "light" : "dark");
+    } else {
+      console.log(theme);
+      setTheme(theme);
+    }
   };
 
   return /*#__PURE__*/React__default["default"].createElement(ThemeContext.Provider, {
@@ -205,7 +212,7 @@ ToggleSwitch.defaultProps = {
   id: ''
 };
 
-var css$4 = ".selectLangComponent {\r\n    display: flex;\r\n    border-radius: 19px;\r\n    padding: 5px 11px;\r\n    border: 0.5px solid #000;\r\n    background-color: rgba(var(--primary));\r\n}\r\n\r\n.selectLangButton {\r\n    background-color: transparent;\r\n    border: none;\r\n    text-transform: uppercase;\r\n    color:rgb(var(--color1));\r\n    padding: 0;\r\n}\r\n\r\n.addPiped > label {\r\n    cursor: pointer;  \r\n    opacity: 30%;\r\n}\r\n\r\n.addPiped::after {\r\n    content: \"|\";\r\n    margin: 0 6px;\r\n}\r\n\r\n.selectLangButton:last-child > span:nth-child(1)::after{\r\n    content: '';\r\n    margin: 0;\r\n}\r\n\r\n.selectLangButton--active label {\r\n    opacity: 1;\r\n}\r\n\r\n";
+var css$4 = ".selectLangComponent {\r\n    display: flex;\r\n    border-radius: 19px;\r\n    padding: 5px 11px;\r\n    border: 0.5px solid #000;\r\n    width: fit-content;\r\n    background-color: rgba(var(--primary));\r\n}\r\n\r\n.selectLangButton {\r\n    background-color: transparent;\r\n    border: none;\r\n    text-transform: uppercase;\r\n    color:rgb(var(--color1));\r\n    padding: 0;\r\n}\r\n\r\n.addPiped > label {\r\n    cursor: pointer;  \r\n    opacity: 30%;\r\n}\r\n\r\n.addPiped::after {\r\n    content: \"|\";\r\n    margin: 0 6px;\r\n}\r\n\r\n.selectLangButton:last-child > span:nth-child(1)::after{\r\n    content: '';\r\n    margin: 0;\r\n}\r\n\r\n.selectLangButton--active label {\r\n    opacity: 1;\r\n}\r\n\r\n";
 n(css$4,{});
 
 var SelectLang = function SelectLang(_ref) {
@@ -374,11 +381,13 @@ var theme = {
   }
 };
 
-var css = ".tabs__box {\r\n  margin: 0 -20px 20px -20px;\r\n}\r\n\r\n.tabs__box:after {\r\n  content: \"\";\r\n  margin: -4px 20px 0;\r\n  display: block;\r\n  border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.tabs__tab {\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 16px;\r\n  border: none;\r\n  outline: none;\r\n  font-size: 16px;\r\n  font-weight: 500;\r\n  background: transparent;\r\n  color: rgba(0, 0, 0, 0.5);\r\n  margin: 4px;\r\n  cursor: pointer;\r\n}\r\n\r\n.tabs__tab:hover {\r\n  color: rgba(0, 0, 0, 0.8);\r\n  background-color: rgba(0, 0, 0, 0.04);\r\n}\r\n\r\n.tabs__tab-active {\r\n  color: rgba(0, 0, 0, 0.8);\r\n}\r\n\r\n.tabs__tab-active:after {\r\n  content: \"\";\r\n  display: block;\r\n  padding-top: 16px;\r\n  margin-bottom: -16px;\r\n  border-bottom: 2px solid rgba(0, 0, 0, 0.74);\r\n}";
+var css = ".tabs__box {\r\n  margin: 0 -20px 20px -20px;\r\n}\r\n\r\n.tabs__box:after {\r\n  content: \"\";\r\n  margin: -4px 20px 0;\r\n  display: block;\r\n}\r\n\r\n.tabs__tab {\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 8px;\r\n  border: none;\r\n  outline: none;\r\n  font-size: 1rem;\r\n  letter-spacing: 0.2rem;\r\n  text-transform: uppercase;\r\n  background: transparent;\r\n  color: rgba(var(--color1));\r\n  margin: auto;\r\n  cursor: pointer;\r\n}\r\n\r\n.tabs__tab:hover {\r\n  color: rgba(var(--color1));\r\n  background-color: rgba(var(--primary));\r\n}\r\n\r\n\r\n.tabs__tab-active:after {\r\n  content: \"\";\r\n  display: block;\r\n  padding-top: 16px;\r\n  margin-bottom: -16px;\r\n  border-bottom: 2px solid rgba(var(--color1));\r\n}";
 n(css,{});
 
 var Tabs = function Tabs(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      width = _ref.width;
+      _ref.height;
   var initialTab = children[0].props.label;
 
   var _useState = React.useState(initialTab),
@@ -403,13 +412,21 @@ var Tabs = function Tabs(_ref) {
     return child.props.label === activeTab;
   });
   return /*#__PURE__*/React__default["default"].createElement("div", null, /*#__PURE__*/React__default["default"].createElement("div", {
-    className: "tabs__box"
+    className: "tabs__box",
+    style: {
+      width: width ? width : 'auto'
+    }
   }, tabs), /*#__PURE__*/React__default["default"].createElement("div", null, tabContent));
 };
 
 var Tab = function Tab(_ref2) {
-  var children = _ref2.children;
-  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, children);
+  var children = _ref2.children,
+      height = _ref2.height;
+  return /*#__PURE__*/React__default["default"].createElement("div", {
+    style: {
+      height: height ? height : 'auto'
+    }
+  }, children);
 };
 
 var index = {

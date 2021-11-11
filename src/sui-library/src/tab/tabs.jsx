@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react"
 import "./tabs.css"
 
-const Tabs = ({ children, width, height }) => {
+const Tabs = ({ children, width, lastElement }) => {
   const initialTab = children[0].props.label
   const [activeTab, setActiveTab] = useState(initialTab)
   const handleActiveTab = useCallback(label => setActiveTab(label), [])
@@ -13,6 +13,7 @@ const Tabs = ({ children, width, height }) => {
         handleActiveTab(child.props.label);
       }}
       className={
+        child.props.disabled ? "tabs__tab-disabled " : "" +
         child.props.label === activeTab
           ? ["tabs__tab", "tabs__tab-active"].join(" ")
           : "tabs__tab"
@@ -27,7 +28,7 @@ const Tabs = ({ children, width, height }) => {
   
   return (
     <div>
-      <div className="tabs__box" style={{width: width ? width : 'auto'}}>{tabs}</div>
+      <div className="tabs__box" style={{width: width ? width : 'auto'}}>{tabs}  {lastElement}</div>
       <div>{tabContent}</div>
     </div>
   );
