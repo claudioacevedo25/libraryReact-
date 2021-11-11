@@ -1,0 +1,34 @@
+.userCard {
+    display: flex;
+    flex-direction: column;
+    width: 212px;
+height: 242px;
+  border-radius: 10px;
+  border: double 1px transparent;
+  background-image: linear-gradient(rgb(var(--primary)), rgb(var(--primary))),
+    radial-gradient(
+      circle at top left,
+      rgba(var(--color1), 0.2),
+      rgba(var(--primary))
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.userCard__body{
+    height: 100%;
+}
+
+.userCard__image {
+    display: contents;
+    height: 70%;
+    
+}
+
+.userCard__image img{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.userCard__content {
+    height: 30%;
+}

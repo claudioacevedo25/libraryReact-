@@ -10,6 +10,7 @@ import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
 import Spinner from "./sui-library/src/spinner";
+import UserCard from "./sui-library/src/userCard";
 import "./App.css";
 
 const languages = [{ name: 'en', id: 1 }, { name: 'sp', id: 2 }, { name: 'pr', id: 3 }];
@@ -38,7 +39,11 @@ function App() {
     {isLoading && <Spinner/>}
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
-        
+        <UserCard  name="Noah Smith"
+  image="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
+  actionLabel="Action"
+  backLabel="back"
+  content={<div> Cosas </div>} />
         <div className='App__buttons'>
           <Button onClick={setTheme}>invite user</Button>
           <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
