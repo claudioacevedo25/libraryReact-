@@ -2,12 +2,17 @@ import React, { useState, createContext } from "react";
 import "./themeContextProvider.css"
 export const ThemeContext = createContext();
 
-const ThemeContextProvider = ({ children, onThemeChange, initialTheme }) => {
+const ThemeContextProvider = ({ children, onThemeChange, initialTheme='dark' }) => {
   const [mode, setTheme] = useState(initialTheme);
 
-  const toggleTheme = () => {
-    onThemeChange && onThemeChange()
+  const toggleTheme = (theme) => {
+    onThemeChange && onThemeChange()    
+    if(!theme || typeof theme !== 'string') {
     setTheme(mode === "dark" ? "light" : "dark")
+    }else{
+      console.log(theme)
+      setTheme(theme)
+    }
   }
 
   return (
