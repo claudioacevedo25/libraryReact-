@@ -9,6 +9,7 @@ import Popover from "./popover/popover.jsx";
 import Header from "./header/header.jsx";
 import Spinner from "./spinner/spinner.jsx";
 import BasicCard from "./basicCard/basicCard.jsx";
+import UserCard from "./userCard/userCard.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './themeContextProvider/theme.js';
 
@@ -29,4 +30,5 @@ export default {
     Header,
     Spinner,
     BasicCard,
+    UserCard,
  };
