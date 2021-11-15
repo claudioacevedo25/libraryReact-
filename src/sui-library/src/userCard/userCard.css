@@ -1,8 +1,8 @@
 .userCard {
-    display: flex;
-    flex-direction: column;
-    width: 212px;
-height: 242px;
+  display: flex;
+  flex-direction: column;
+  width: 212px;
+  height: 242px;
   border-radius: 10px;
   border: double 1px transparent;
   background-image: linear-gradient(rgb(var(--primary)), rgb(var(--primary))),
@@ -15,20 +15,61 @@ height: 242px;
   background-clip: content-box, border-box;
 }
 
-.userCard__body{
-    height: 100%;
+.userCard__body {
+  height: 100%;
 }
 
 .userCard__image {
-    display: contents;
-    height: 70%;
-    
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 68%;
+  border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
 }
 
-.userCard__image img{
-    border-radius: 10px 10px 0px 0px;
+.userCard__image img {
+  border-radius: 10px 10px 0px 0px;
 }
 
 .userCard__content {
-    height: 30%;
+  height: 32%;
+  
+  
+}
+
+.userCard__content__action{
+  margin-left: 12px;
+  height: 100%;
+display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.useCard__name {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.useCard__actionLabel {
+margin-bottom: 4px;
+color: rgba(var(--color1),0.4);
+cursor: pointer;
+}
+
+.userCard__content__back{
+  height: 100%;
+display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2px 2px 0 5px;
+}
+
+.useCard__backLabel {
+ 
+color: rgba(var(--color1),0.4);
+cursor: pointer;
 }

@@ -1,6 +1,8 @@
 .typography {
   color: rgb(var(--color1));
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .typography__h1 {
@@ -19,6 +21,7 @@
 .typography__h3 {
   font-size: 1rem;
   letter-spacing: 0.2rem;
+  line-height: 145%;
   text-transform: uppercase;
 }
 
@@ -45,6 +48,7 @@
 
 .typography__small {
   font-size: 0.75rem;
+  letter-spacing: 0.05rem;
 }
 
 .typography__preTitle {

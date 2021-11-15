@@ -14,37 +14,43 @@ const UserCard = ({
   const [viewAction, setViewAction] = useState(false);
 
   return (
-    <div
-      className={`${className} userCard `}
-      onClick={() => setViewAction(!viewAction)}
-    >
-        <div className={`userCard__body`}>
-      <div  style={{backgroundImage:(image)}} className={`userCard__image`}>
-        
-      </div>
-        <div className={`userCard__content`}>
+    <div className={`${className} userCard `}>
+      <div className={`userCard__body`}>
+        <div
+          style={{ backgroundImage: `url(${image})` }}
+          className={`userCard__image`}
+          onClick={() => setViewAction(!viewAction)}
+        ></div>
+        <div className="userCard__content">
           {viewAction ? (
-            <>
-              <Typography variant="h3">{name}</Typography>
+            <div className="userCard__content__action">
+            
+              <Typography variant="h3" className="useCard__name">
+                {name}
+              </Typography>
               <Typography
+                className="useCard__actionLabel"
                 onClick={() => setViewAction(!viewAction)}
                 variant="small"
               >
-                {`${actionLabel} >`}
+                {`${actionLabel}>`}
               </Typography>
-            </>
+            </div>
           ) : (
-            <>
-              {content}
+            <div className="userCard__content__back">
+             
               <Typography
+              className="useCard__backLabel"
                 onClick={() => setViewAction(!viewAction)}
                 variant="small"
               >
-                {`< ${backLabel}`}
-              </Typography>
-            </>
+                {`<${backLabel}`}
+              </Typography> 
+              {content}
+            </div>
           )}
-      </div></div>
+        </div>
+      </div>
     </div>
   );
 };
