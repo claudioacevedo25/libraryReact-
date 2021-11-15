@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   width: 212px;
-  height: 242px;
   border-radius: 10px;
   border: double 1px transparent;
   background-image: linear-gradient(rgb(var(--primary)), rgb(var(--primary))),
@@ -16,7 +15,7 @@
 }
 
 .userCard__body {
-  height: 100%;
+  height: 242px;
 }
 
 .userCard__image {

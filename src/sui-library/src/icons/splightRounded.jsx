@@ -14,6 +14,7 @@ const SplightRounded = ({ className, size }) => {
 
 SplightRounded.defaultProps = {
     size: 60,
+    className:''
 };
 
 export default SplightRounded;

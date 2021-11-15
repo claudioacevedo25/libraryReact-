@@ -14,7 +14,7 @@ const UserCard = ({
   const [viewAction, setViewAction] = useState(false);
 
   return (
-    <div className={`${className} userCard `}>
+    <div disabled={disabled} className={`${className} userCard `}>
       <div className={`userCard__body`}>
         <div
           style={{ backgroundImage: `url(${image})` }}
@@ -24,28 +24,26 @@ const UserCard = ({
         <div className="userCard__content">
           {viewAction ? (
             <div className="userCard__content__action">
-            
-              <Typography variant="h3" className="useCard__name">
+              <Typography variant="h6" className="useCard__name">
                 {name}
               </Typography>
               <Typography
                 className="useCard__actionLabel"
                 onClick={() => setViewAction(!viewAction)}
-                variant="small"
+                variant="body2"
               >
                 {`${actionLabel}>`}
               </Typography>
             </div>
           ) : (
             <div className="userCard__content__back">
-             
               <Typography
-              className="useCard__backLabel"
+                className="useCard__backLabel"
                 onClick={() => setViewAction(!viewAction)}
-                variant="small"
+                variant="body2"
               >
                 {`<${backLabel}`}
-              </Typography> 
+              </Typography>
               {content}
             </div>
           )}
@@ -57,6 +55,8 @@ const UserCard = ({
 
 UserCard.defaultProps = {
   onClick: () => {},
+  disabled:false,
+  className: "",
 };
 
 export default UserCard;

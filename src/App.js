@@ -43,19 +43,20 @@ function App() {
       {isLoading && <Spinner />}
       <Header pages={pages} currentPage={currentPage} onClick={changePage} />
       <div className="App">
-        <UserCard
-          name="Cholod Estrella"
-          image="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
-          actionLabel="Actions"
-          backLabel="Back"
-          content={<Typography> Cosas </Typography>}
-        />
+       
         <BasicCard
           title="Digital Protection Manager"
           subtitle="Go Now"
           width="250"
           height="124"
           onClick={setTheme}
+        />
+         <UserCard
+          name="Cholod Estrella"
+          image="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
+          actionLabel="Actions"
+          backLabel="Back"
+          content={<Typography> Cosas </Typography>}
         />
         <div className="App__buttons">
           <Button onClick={setTheme}>invite user</Button>
@@ -81,10 +82,17 @@ function App() {
           <Typography variant="h1">Label h1</Typography>
           <Typography variant="h2">Label h2</Typography>
           <Typography variant="h3">Label h3</Typography>
+          <Typography variant="h4">Label h4</Typography>
+          <Typography variant="h5">Label h5</Typography>
+          <Typography variant="h6">Label h6</Typography>
+          <Typography variant="h7">Label h7</Typography>
           <Typography variant="subtitle">Label subtitle</Typography>
-          <Typography variant="body">Label body</Typography>
-          <Typography variant="bodyBold">Label bodyBold</Typography>
+          <Typography variant="body1">Label body1</Typography>
+          <Typography variant="bodyBold1">Label bodyBold1</Typography>
+          <Typography variant="body2">Label body2</Typography>
+          <Typography variant="bodyBold2">Label bodyBold2</Typography>
           <Typography variant="small">Label small</Typography>
+          <Typography variant="smallBold">Label smallBold</Typography>
           <Typography variant="preTitle">Label preTitle</Typography>
           <Typography variant="textButton">Label textButton</Typography>
           <Typography>No variant</Typography>

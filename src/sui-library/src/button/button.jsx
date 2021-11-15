@@ -17,6 +17,7 @@ const Button = ({ className, onClick, variant, ...props }) => {
 Button.defaultProps = {
   onClick: () => { },
   variant: 'normal',
+  className:'',
 };
 
 export default Button;

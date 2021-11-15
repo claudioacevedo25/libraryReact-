@@ -8,53 +8,88 @@
 .typography__h1 {
   font-weight: normal;
   font-size: 2.5rem;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .typography__h2 {
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.875rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .typography__h3 {
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
   line-height: 145%;
   text-transform: uppercase;
 }
 
 .typography__h4 {
+  font-size: 1.125rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.typography__h5 {
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.typography__h6 {
   font-size: 0.875rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.typography__h7 {
+  font-size: 0.75rem;
+  letter-spacing: 0.15rem;
   text-transform: uppercase;
 }
 
 .typography__subtitle {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
-.typography__body {
+.typography__body1 {
   font-size: 0.875rem;
   line-height: 140%;
 }
 
-.typography__bodyBold {
+.typography__body2 {
+  font-size: 0.75rem;
+  line-height: 140%;
+}
+
+.typography__bodyBold1 {
   font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 140%;
+}
+
+.typography__bodyBold2 {
+  font-size: 0.75rem;
   font-weight: bold;
   line-height: 140%;
 }
 
 .typography__small {
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   letter-spacing: 0.05rem;
+}
+
+.typography__smallBold {
+  font-size: 0.625rem;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
 }
 
 .typography__preTitle {
   font-size: 0.625rem;
   font-weight: bold;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.2em;
 }
 
 .typography__textButton {

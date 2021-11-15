@@ -20,6 +20,7 @@ const SplightName = ({ className, size }) => {
 
 SplightName.defaultProps = {
     size: 36,
+    className:''
 };
 
 export default SplightName;
