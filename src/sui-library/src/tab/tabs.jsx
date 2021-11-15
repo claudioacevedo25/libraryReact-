@@ -11,7 +11,8 @@ const Tabs = ({ children, width, lastElement, className }) => {
     <button
       className={
         `${child.props.disabled && "tabs__tab--disabled "}
-         ${child.props.label === activeTab ? ["tabs__tab", "tabs__tab--active"].join(" ") : "tabs__tab"}`       
+         ${child.props.label === activeTab ? ["tabs__tab ", "tabs__tab--active "].join(" ") : "tabs__tab "}
+         ${className}`       
       }
       key={child.props.label}
     >
@@ -34,11 +35,17 @@ const Tabs = ({ children, width, lastElement, className }) => {
   );
 }
 
-export const Tab = ({ children, height }) => {
-  return <div style={height && { height: `${height}vh`}}>{children}</div>;
+export const Tab = ({ children, height, className }) => {
+  return <div className={className} style={height && { height: `${height}vh`}}>{children}</div>;
 }
 
 Tabs.defaultProps ={
- lastElement: <></>
+ lastElement: <></>,
+ className: ''
 };
+
+Tab.defaultProps = {
+  className: ''
+};
+
 export default Tabs
