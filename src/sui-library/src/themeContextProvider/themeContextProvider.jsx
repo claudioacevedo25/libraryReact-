@@ -5,10 +5,14 @@ export const ThemeContext = createContext();
 const ThemeContextProvider = ({ children, onThemeChange, initialTheme }) => {
   const [mode, setTheme] = useState(initialTheme);
 
-  const toggleTheme = () => {
+  const toggleTheme = (theme) => {
     onThemeChange && onThemeChange()
-    setTheme(mode === "dark" ? "light" : "dark")
-  }
+    if (!theme || typeof theme !== 'string') {
+      setTheme(mode === "dark" ? "light" : "dark")
+    } else {
+      setTheme(theme)
+    }
+  };
 
   return (
     <ThemeContext.Provider
@@ -25,6 +29,10 @@ const ThemeContextProvider = ({ children, onThemeChange, initialTheme }) => {
       </div>
     </ThemeContext.Provider>
   );
+};
+
+ThemeContextProvider.defaultProps = {
+  initialTheme: "dark",
 };
 
 

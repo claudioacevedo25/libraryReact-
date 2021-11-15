@@ -42,7 +42,7 @@ ToggleSwitch.defaultProps = {
   size: "md",
   disabled: false,
   checked: false,
-  id: "",
+  id: '',
   className: "",
 };
 

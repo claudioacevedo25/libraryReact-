@@ -17,8 +17,8 @@ const Avatar = ({ src, name, size, className }) => {
 };
 
 Avatar.defaultProps = {
-  name: '',
-  className:''
+  name: "",
+  className: "",
 };
 
 export default Avatar;

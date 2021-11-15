@@ -23,7 +23,7 @@ const Popover = ({ displayLabel, position, children, className }) => {
   return (
     <div
       ref={ref}
-      className={`${className} popover ${isPopoverOpen && "popover--activo"}`}
+      className={`popover ${isPopoverOpen && "popover--activo"} ${className}`}
     >
       <div
         className="popover__view"
