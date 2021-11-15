@@ -4,7 +4,7 @@ import DarkIcon from './assets/darkSplight.svg';
 import LightIcon from './assets/lightSplight.svg';
 
 
-const SplightName = ({ className, size }) => {
+const SplightName = ({ className, size, onClick }) => {
     const { mode } = useContext(ThemeContext);
     const width = size + 76;
     const src = mode === 'dark' ? DarkIcon : LightIcon;
@@ -14,6 +14,7 @@ const SplightName = ({ className, size }) => {
             src={src}
             alt='splight'
             className={className}
+            onClick={onClick}
         />
     )
 }
@@ -21,6 +22,7 @@ const SplightName = ({ className, size }) => {
 SplightName.defaultProps = {
     size: 28,
     className: "",
+    onClick: () => { },
 };
 
 export default SplightName;

@@ -2,18 +2,17 @@ import React, { useState, createContext } from "react";
 import "./themeContextProvider.css"
 export const ThemeContext = createContext();
 
-const ThemeContextProvider = ({ children, onThemeChange, initialTheme='dark' }) => {
+const ThemeContextProvider = ({ children, onThemeChange, initialTheme }) => {
   const [mode, setTheme] = useState(initialTheme);
 
   const toggleTheme = (theme) => {
-    onThemeChange && onThemeChange()    
-    if(!theme || typeof theme !== 'string') {
-    setTheme(mode === "dark" ? "light" : "dark")
-    }else{
-      console.log(theme)
+    onThemeChange && onThemeChange()
+    if (!theme || typeof theme !== 'string') {
+      setTheme(mode === "dark" ? "light" : "dark")
+    } else {
       setTheme(theme)
     }
-  }
+  };
 
   return (
     <ThemeContext.Provider
@@ -30,6 +29,10 @@ const ThemeContextProvider = ({ children, onThemeChange, initialTheme='dark' }) 
       </div>
     </ThemeContext.Provider>
   );
+};
+
+ThemeContextProvider.defaultProps = {
+  initialTheme: "dark",
 };
 
 
