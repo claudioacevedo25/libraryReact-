@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react"
-import Typography from "../typography"
+import Typography from "../typography/typography.jsx"
 import "./tabs.css"
 
 const Tabs = ({ children, width, lastElement, className }) => {
