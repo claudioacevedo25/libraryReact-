@@ -44,21 +44,6 @@ function App() {
       {isLoading && <Spinner />}
       <Header pages={pages} currentPage={currentPage} onClick={changePage} />
       <div className="App">
-<<<<<<< HEAD
-      <Tabs width='90' lastElement={<input type='text'></input>}>
-      <Tab label="buttons" tabName='Favs' height='50'>
-        <Button onClick={()=>{setTheme('dark')}}>invite user</Button>
-        <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
-      </Tab>
-      <Tab label="switch" tabName='Recent' height='50'>
-              <BasicCard title="Digital Protection Manager" subtitle="Go Now" width="250" height="124" onClick={setTheme}/>
-        <div className='App__Switch'>
-          <SwitchTest />
-        </div>
-      </Tab>
-      <Tab label="typography" tabName='Widgets' height='50'>
-      <div className="App__labels">
-=======
        
         <BasicCard
           title="Digital Protection Manager"
@@ -95,7 +80,6 @@ function App() {
           />
         </div>
         <div className="App__labels">
->>>>>>> 3af52ef079373bd6d9ec4dd0da08a254d6076a8b
           <Typography variant="h1">Label h1</Typography>
           <Typography variant="h2">Label h2</Typography>
           <Typography variant="h3">Label h3</Typography>
