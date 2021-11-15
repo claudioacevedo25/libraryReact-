@@ -10,6 +10,7 @@ import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
 import Spinner from "./sui-library/src/spinner";
+import Tabs,{ Tab } from "./sui-library/src/tab/tabs.jsx";
 import BasicCard from "./sui-library/src/basicCard/basicCard";
 import UserCard from "./sui-library/src/userCard";
 import "./App.css";
@@ -99,13 +100,37 @@ function App() {
           <Typography variant="body" color="red" size="1.8">
             Color and size
           </Typography>
-        </div>
-        <div className="App__avatar">
-          <Avatar
+      </div>
+      </Tab>
+      <Tab label="avatar" tabName='Avatar' height='50'>
+        <Avatar
             src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
             name="Thomas "
           />
           <Avatar name="Estrella cholod" />
+<<<<<<< HEAD
+      </Tab>
+      <Tab label="popover" tabName='Popover' height='50'>
+        <Popover position="left" displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
+          src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
+          name="Thomas "
+        />
+            <Typography variant="h3">Daniel moore</Typography>
+            <Button >My Profile</Button>
+        </Popover>
+      </Tab>
+      <Tab label="icons" tabName='Icons' height='50'>
+          <SplightRounded />
+          <SplightName />
+      </Tab>
+      <Tab label="selectLang" tabName='SelectLang' height='50' disabled>
+        <div className='App__SelectLang'>
+          <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages} style={{width:'50px'}} />
+        </div>
+      </Tab>
+      </Tabs>
+    </div>
+=======
         </div>
         <Popover
           position="left"
@@ -120,6 +145,7 @@ function App() {
           <Button>My Profile</Button>
         </Popover>
       </div>
+>>>>>>> 3af52ef079373bd6d9ec4dd0da08a254d6076a8b
     </>
   );
 }

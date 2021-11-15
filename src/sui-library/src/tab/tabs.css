@@ -1,0 +1,51 @@
+.tabs__box {
+  margin: 0 -20px 20px -20px;
+}
+
+.tabs__box:after {
+  content: "";
+  margin: -4px 20px 0;
+  display: block;
+}
+
+.tabs__tab {
+  display: inline-block;
+  padding: 8px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  background: transparent;
+  color: rgba(var(--color1), 0.5);
+  margin: auto;
+  cursor: pointer;
+}
+
+.tabs__tab:hover {
+  color: rgba(var(--color1));
+  background-color: rgba(var(--primary));
+}
+
+.tabs__tab--active {
+  color: rgba(var(--color1));
+}
+
+.tabs__tab--active:after {
+  content: "";
+  display: block;
+  padding-top: 8px;
+  margin-bottom: -16px;
+  border-bottom: 1px solid rgba(var(--color1));
+}
+
+.tabs__tab--disabled{
+  color: rgba(var(--color1), 0.5);
+  cursor: not-allowed;
+}
+
+.tabs__tab--disabled label{
+  pointer-events: none;
+}
+
+.tabs__tab label{
+  cursor: pointer;
+}
