@@ -32,10 +32,11 @@ const Popover = ({ displayLabel, position, children, className }) => {
         {displayLabel}
       </div>
       <div
-        className={`popover__content ${position === "left"
+        className={`popover__content ${
+          position === "left"
             ? "popover__content--left"
             : "popover__content--right"
-          }`}
+        }`}
       >
         {children}
       </div>
@@ -47,7 +48,7 @@ Popover.defaultProps = {
   displayLabel: {},
   position: "right",
   children: [],
-  className: "",
+  className:'',
 };
 
 export default Popover;

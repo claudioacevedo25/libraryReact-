@@ -3,7 +3,6 @@ import Typography from "../typography/typography.jsx";
 import "./basicCard.css";
 
 const BasicCard = ({ className, onClick, title, subtitle, width, height }) => {
-    
   return (
     <div className={`cardBasic ${className}`}>
       <div
@@ -11,14 +10,14 @@ const BasicCard = ({ className, onClick, title, subtitle, width, height }) => {
         onClick={onClick}
         style={{ width: `${width}px`, height: `${height}px` }}
       >
-        <Typography variant="h4" className="cardBasic__title">
+        <Typography variant="h6" className="cardBasic__title">
           {title}
         </Typography>
       </div>
       {!!subtitle && (
         <Typography
           onClick={onClick}
-          variant="small"
+          variant="body2"
           className="cardBasic__subtitle"
         >
           {subtitle}
@@ -30,8 +29,8 @@ const BasicCard = ({ className, onClick, title, subtitle, width, height }) => {
 
 BasicCard.defaultProps = {
   onClick: () => {},
-  title: "",
-  className: "",
+  title: '',
+  className:''
 };
 
 export default BasicCard;

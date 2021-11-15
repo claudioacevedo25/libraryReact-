@@ -20,9 +20,8 @@ const SplightName = ({ className, size, onClick }) => {
 }
 
 SplightName.defaultProps = {
-    size: 28,
-    className: "",
-    onClick: () => { },
+    size: 36,
+    className:''
 };
 
 export default SplightName;
