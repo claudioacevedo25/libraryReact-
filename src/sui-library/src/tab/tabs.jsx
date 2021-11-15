@@ -16,7 +16,7 @@ const Tabs = ({ children, width, lastElement, className }) => {
       }
       key={child.props.label}
     >
-      <Typography variant='h3' color='var(--color1), 0.5' onClick={e => {
+      <Typography variant='h4' color='var(--color1), 0.5' onClick={e => {
         e.preventDefault();
         handleActiveTab(child.props.label);
       }}>

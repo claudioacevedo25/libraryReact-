@@ -41,17 +41,17 @@ function App() {
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
       <Tabs width='90' lastElement={<input type='text'></input>}>
-      <Tab label="buttons" tabName='Buttons' height='50'>
+      <Tab label="buttons" tabName='Favs' height='50'>
         <Button onClick={()=>{setTheme('dark')}}>invite user</Button>
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
       </Tab>
-      <Tab label="switch" tabName='Switch' height='50'>
+      <Tab label="switch" tabName='Recent' height='50'>
               <BasicCard title="Digital Protection Manager" subtitle="Go Now" width="250" height="124" onClick={setTheme}/>
         <div className='App__Switch'>
           <SwitchTest />
         </div>
       </Tab>
-      <Tab label="typography" tabName='Typography' height='50'>
+      <Tab label="typography" tabName='Widgets' height='50'>
       <div className="App__labels">
           <Typography variant="h1">Label h1</Typography>
           <Typography variant="h2">Label h2</Typography>
