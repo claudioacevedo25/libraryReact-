@@ -40,18 +40,18 @@ function App() {
     {isLoading && <Spinner/>}
       <Header pages={pages} currentPage={currentPage} onClick={changePage}/>
       <div className="App">
-      <Tabs width='90vw' lastElement={<input type='text'></input>}>
-      <Tab label="buttons" tabName='Buttons' height='50vh'>
+      <Tabs width='90' lastElement={<input type='text'></input>}>
+      <Tab label="buttons" tabName='Buttons' height='50'>
         <Button onClick={()=>{setTheme('dark')}}>invite user</Button>
         <Button onClick={setTheme} variant='alternate'>Variant Alternate</Button>
       </Tab>
-      <Tab label="switch" tabName='Switch' height='50vh'>
+      <Tab label="switch" tabName='Switch' height='50'>
               <BasicCard title="Digital Protection Manager" subtitle="Go Now" width="250" height="124" onClick={setTheme}/>
         <div className='App__Switch'>
           <SwitchTest />
         </div>
       </Tab>
-      <Tab label="typography" tabName='Typography' height='50vh'>
+      <Tab label="typography" tabName='Typography' height='50'>
       <div className="App__labels">
           <Typography variant="h1">Label h1</Typography>
           <Typography variant="h2">Label h2</Typography>
@@ -68,14 +68,14 @@ function App() {
           </Typography>
       </div>
       </Tab>
-      <Tab label="avatar" tabName='Avatar' height='50vh'>
+      <Tab label="avatar" tabName='Avatar' height='50'>
         <Avatar
             src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
             name="Thomas "
           />
           <Avatar name="Estrella cholod" />
       </Tab>
-      <Tab label="popover" tabName='Popover' height='50vh'>
+      <Tab label="popover" tabName='Popover' height='50'>
         <Popover position="left" displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
           name="Thomas "
@@ -84,11 +84,11 @@ function App() {
             <Button >My Profile</Button>
         </Popover>
       </Tab>
-      <Tab label="icons" tabName='Icons' height='50vh'>
+      <Tab label="icons" tabName='Icons' height='50'>
           <SplightRounded />
           <SplightName />
       </Tab>
-      <Tab label="selectLang" tabName='SelectLang' height='50vh' disabled>
+      <Tab label="selectLang" tabName='SelectLang' height='50' disabled>
         <div className='App__SelectLang'>
           <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages} style={{width:'50px'}} />
         </div>
