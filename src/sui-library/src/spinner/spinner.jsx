@@ -3,20 +3,20 @@ import srcSpinner from "./assets/spinner.gif";
 import "./spinner.css";
 
 const Spinner = ({ className, size }) => {
-    return (
-        <div className="spinner__component">
-            <img
-                className={`spinner__${size} ${className}`}
-                src={srcSpinner}
-                alt=''
-            />
-        </div>
-    );
-}
+  return (
+    <div className="spinner__component">
+      <img
+        className={`${className} spinner__${size}`}
+        src={srcSpinner}
+        alt=""
+      />
+    </div>
+  );
+};
 
 Spinner.defaultProps = {
-    className: "",
-    size: "md",
-}
+  className: "",
+  size: "md",
+};
 
 export default Spinner;
