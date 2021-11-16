@@ -19,6 +19,10 @@
   color:rgb(var(--background));
 }
 
+.buttonComponent label:hover {
+  cursor: pointer;
+}
+
 .buttonComponent__normal{
   background-color: rgb(var(--primary));
 }
