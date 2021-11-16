@@ -117,7 +117,7 @@
     var _useContext = React.useContext(ThemeContext),
         mode = _useContext.mode;
 
-    var width = size + 76;
+    var width = size + 67;
     var src = mode === 'dark' ? DarkIcon : LightIcon;
     return /*#__PURE__*/React__default["default"].createElement("img", {
       style: {
@@ -132,7 +132,7 @@
   };
 
   SplightName.defaultProps = {
-    size: 36,
+    size: 31,
     className: ''
   };
 
@@ -344,7 +344,7 @@
           return _onClick(page);
         }
       }, /*#__PURE__*/React__default["default"].createElement(Typography, {
-        variant: "".concat(page.id === currentPage.id ? "bodyBold" : "body")
+        variant: "".concat(page.id === currentPage.id ? "bodyBold2" : "body2")
       }, page.name));
     }))), /*#__PURE__*/React__default["default"].createElement("div", {
       className: "navbar__user"
@@ -523,7 +523,7 @@
         className: "".concat(child.props.disabled && "tabs__tab--disabled ", "\n         ").concat(child.props.label === activeTab ? ["tabs__tab ", "tabs__tab--active "].join(" ") : "tabs__tab ", "\n         ").concat(className),
         key: child.props.label
       }, /*#__PURE__*/React__default["default"].createElement(Typography, {
-        variant: "h4",
+        variant: "h5",
         color: "var(--color1), 0.5",
         onClick: function onClick(e) {
           e.preventDefault();

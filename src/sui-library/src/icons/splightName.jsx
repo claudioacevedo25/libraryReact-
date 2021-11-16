@@ -6,7 +6,7 @@ import LightIcon from './assets/lightSplight.svg';
 
 const SplightName = ({ className, size, onClick }) => {
     const { mode } = useContext(ThemeContext);
-    const width = size + 76;
+    const width = size + 67;
     const src = mode === 'dark' ? DarkIcon : LightIcon;
     return (
         <img
@@ -20,7 +20,7 @@ const SplightName = ({ className, size, onClick }) => {
 }
 
 SplightName.defaultProps = {
-    size: 36,
+    size: 31,
     className:''
 };
 

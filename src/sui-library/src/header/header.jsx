@@ -18,7 +18,7 @@ const Header = ({ className, icon, pages, user, onClick, currentPage }) => {
               onClick={() => onClick(page)}
             >
               <Typography
-                variant={`${page.id === currentPage.id ? "bodyBold" : "body"}`}
+                variant={`${page.id === currentPage.id ? "bodyBold2" : "body2"}`}
               >
                 {page.name}
               </Typography>

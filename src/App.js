@@ -123,6 +123,12 @@ function App() {
         <div className='App__SelectLang'>
           <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages} style={{width:'50px'}} />
         </div>
+        <div>
+          <Tabs width='80'>
+            <Tab label="switch" tabName='Switch' height='50'></Tab>
+            <Tab label="typography" tabName='Widgets' height='50'></Tab>
+          </Tabs>
+        </div>
     </div>
     </>
   );
