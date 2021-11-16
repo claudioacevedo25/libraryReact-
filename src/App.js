@@ -44,21 +44,26 @@ function App() {
       {isLoading && <Spinner />}
       <Header pages={pages} currentPage={currentPage} onClick={changePage} />
       <div className="App">
-       
-        <BasicCard
+       <Tabs>
+        <Tab label="basiccard" tabName='basicCard' height='50'>
+          <BasicCard
           title="Digital Protection Manager"
           subtitle="Go Now"
           width="250"
           height="124"
           onClick={setTheme}
         />
-         <UserCard
+        </Tab>
+        <Tab label="usercard" tabName='UserCard' height='50'>
+        <UserCard
           name="Cholod Estrella"
           image="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
           actionLabel="Actions"
           backLabel="Back"
           content={<Typography> Cosas </Typography>}
         />
+        </Tab>
+       </Tabs>
         <div className="App__buttons">
           <Button onClick={setTheme}>invite user</Button>
           <Button onClick={setTheme} variant="alternate">
