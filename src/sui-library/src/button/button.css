@@ -25,6 +25,7 @@
 
 .buttonComponent__normal{
   background-color: rgb(var(--primary));
+  border: 1px solid rgb(var(--color1));
 }
 
 .buttonComponent__alternate{
