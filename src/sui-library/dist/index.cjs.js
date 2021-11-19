@@ -117,7 +117,7 @@ var SplightName = function SplightName(_ref) {
   var _useContext = React.useContext(ThemeContext),
       mode = _useContext.mode;
 
-  var width = size + 76;
+  var width = size + 67;
   var src = mode === 'dark' ? DarkIcon : LightIcon;
   return /*#__PURE__*/React__default["default"].createElement("img", {
     style: {
@@ -132,7 +132,7 @@ var SplightName = function SplightName(_ref) {
 };
 
 SplightName.defaultProps = {
-  size: 36,
+  size: 31,
   className: ''
 };
 
@@ -344,7 +344,7 @@ var Header = function Header(_ref) {
         return _onClick(page);
       }
     }, /*#__PURE__*/React__default["default"].createElement(Typography, {
-      variant: "".concat(page.id === currentPage.id ? "bodyBold" : "body")
+      variant: "".concat(page.id === currentPage.id ? "bodyBold2" : "body2")
     }, page.name));
   }))), /*#__PURE__*/React__default["default"].createElement("div", {
     className: "navbar__user"
@@ -500,7 +500,7 @@ var theme = {
   }
 };
 
-var css = ".tabs__box {\n  margin: 0 -20px 20px -20px;\n}\n\n.tabs__box:after {\n  content: \"\";\n  margin: -4px 20px 0;\n  display: block;\n}\n\n.tabs__tab {\n  display: inline-block;\n  padding: 8px;\n  border: none;\n  outline: none;\n  text-transform: uppercase;\n  background: transparent;\n  color: rgba(var(--color1), 0.5);\n  margin: auto;\n  cursor: pointer;\n}\n\n.tabs__tab:hover {\n  color: rgba(var(--color1));\n  background-color: rgba(var(--primary));\n}\n\n.tabs__tab--active {\n  color: rgba(var(--color1));\n}\n\n.tabs__tab--active:after {\n  content: \"\";\n  display: block;\n  padding-top: 8px;\n  margin-bottom: -16px;\n  border-bottom: 1px solid rgba(var(--color1));\n}\n\n.tabs__tab--disabled{\n  color: rgba(var(--color1), 0.5);\n  cursor: not-allowed;\n}\n\n.tabs__tab--disabled label{\n  pointer-events: none;\n}\n\n.tabs__tab label{\n  cursor: pointer;\n}";
+var css = ".tabs__box {\n  margin: 0 -20px 20px 0px;\n}\n\n.tabs__box:after {\n  content: \"\";\n  margin: -4px 20px 0;\n  display: block;\n}\n\n.tabs__tab {\n  display: inline-block;\n  padding: 8px;\n  border: none;\n  outline: none;\n  text-transform: uppercase;\n  background: transparent;\n  color: rgba(var(--color1), 0.5);\n  margin: auto;\n  cursor: pointer;\n}\n\n.tabs__tab:hover {\n  color: rgba(var(--color1));\n}\n\n.tabs__tab--active {\n  color: rgba(var(--color1));\n}\n\n.tabs__tab--active:after {\n  content: \"\";\n  display: block;\n  padding-top: 8px;\n  margin-bottom: -16px;\n  border-bottom: 1px solid rgba(var(--color1));\n}\n\n.tabs__tab--disabled{\n  color: rgba(var(--color1), 0.5);\n  cursor: not-allowed;\n}\n\n.tabs__tab--disabled label{\n  pointer-events: none;\n}\n\n.tabs__tab label{\n  cursor: pointer;\n}";
 n(css,{});
 
 var Tabs = function Tabs(_ref) {
@@ -523,7 +523,7 @@ var Tabs = function Tabs(_ref) {
       className: "".concat(child.props.disabled && "tabs__tab--disabled ", "\n         ").concat(child.props.label === activeTab ? ["tabs__tab ", "tabs__tab--active "].join(" ") : "tabs__tab ", "\n         ").concat(className),
       key: child.props.label
     }, /*#__PURE__*/React__default["default"].createElement(Typography, {
-      variant: "h4",
+      variant: "h5",
       color: "var(--color1), 0.5",
       onClick: function onClick(e) {
         e.preventDefault();

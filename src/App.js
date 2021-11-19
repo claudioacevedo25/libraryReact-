@@ -12,6 +12,7 @@ import Header from "./sui-library/src/header";
 import Spinner from "./sui-library/src/spinner";
 import BasicCard from "./sui-library/src/basicCard/basicCard";
 import UserCard from "./sui-library/src/userCard";
+import Tabs, {Tab} from "./sui-library/src/tab/tabs.jsx";
 import Modal from "./sui-library/src/modal";
 import "./App.css";
 
@@ -45,14 +46,17 @@ function App() {
       {isLoading && <Spinner />}
       <Header pages={pages} currentPage={currentPage} onClick={changePage} />
       <div className="App">
-       
-        <BasicCard
+       <Tabs>
+        <Tab label="basiccard" tabName='basicCard' height='50'>
+          <BasicCard
           title="Digital Protection Manager"
           subtitle="Go Now"
           width="250"
           height="124"
           onClick={setTheme}
         />
+        </Tab>
+        <Tab label="usercard" tabName='UserCard' height='50'>
         <UserCard
           name="Cholod Estrella"
           image="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
@@ -60,12 +64,14 @@ function App() {
           backLabel="Back"
           content={<Typography> Cosas </Typography>}
         />
+        </Tab>
+       </Tabs>
         <div className="App__buttons">
           <Button onClick={setTheme}>invite user</Button>
           <Button onClick={()=> setShow(!show)} variant="alternate">
             Show Modal
           </Button>
-          <Modal show={show} onClose={()=> setShow(!show)} width="100">
+          <Modal show={show} onClose={()=> setShow(!show)} >
           <div>
             <Typography variant="h3">Sure you want to accept?</Typography>
             <Typography variant="h3">Label h3</Typography>
@@ -138,7 +144,13 @@ function App() {
             style={{ width: "50px" }}
           />
         </div>
-      </div>
+        <div>
+          <Tabs width='80'>
+            <Tab label="switch" tabName='Switch' height='50'></Tab>
+            <Tab label="typography" tabName='Widgets' height='50'></Tab>
+          </Tabs>
+        </div>
+    </div>
     </>
   );
 }
