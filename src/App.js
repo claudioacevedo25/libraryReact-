@@ -10,9 +10,10 @@ import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
 import Spinner from "./sui-library/src/spinner";
-import Tabs,{ Tab } from "./sui-library/src/tab/tabs.jsx";
 import BasicCard from "./sui-library/src/basicCard/basicCard";
 import UserCard from "./sui-library/src/userCard";
+import Tabs, {Tab} from "./sui-library/src/tab/tabs.jsx";
+import Modal from "./sui-library/src/modal";
 import "./App.css";
 
 const languages = [
@@ -30,6 +31,7 @@ function App() {
   const { setTheme } = useContext(ThemeContext);
   const [selectedLang, setSelectedLang] = useState(languages[0]);
   const [currentPage, setCurrentPage] = useState(pages[0]);
+  const [show, setShow] = useState(true);
   const isLoading = false; //turn on true to test Spinner component
 
   const handle = (lang) => {
@@ -66,9 +68,18 @@ function App() {
        </Tabs>
         <div className="App__buttons">
           <Button onClick={setTheme}>invite user</Button>
-          <Button onClick={setTheme} variant="alternate">
-            Variant Alternate
+          <Button onClick={()=> setShow(!show)} variant="alternate">
+            Show Modal
           </Button>
+          <Modal show={show} onClose={()=> setShow(!show)} >
+          <div>
+            <Typography variant="h3">Sure you want to accept?</Typography>
+            <Typography variant="h3">Label h3</Typography>
+            <Typography variant="h3">Label h3</Typography>
+            <Typography variant="h3">Label h3</Typography>
+          </div>
+          <Button onClick={setTheme}>invite user</Button>
+        </Modal>
         </div>
         <div className="App__Switch">
           <SwitchTest />
@@ -105,23 +116,33 @@ function App() {
           <Typography variant="body" color="red" size="1.8">
             Color and size
           </Typography>
-      </div>
+        </div>
         <Avatar
-            src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
-            name="Thomas "
-          />
-          <Avatar name="Estrella cholod" />
-        <Popover position="left" displayLabel={<Avatar name="Estrella cholod" />}> <Avatar
           src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
           name="Thomas "
         />
-            <Typography variant="h3">Daniel moore</Typography>
-            <Button >My Profile</Button>
+        <Avatar name="Estrella cholod" />
+        <Popover
+          position="left"
+          displayLabel={<Avatar name="Estrella cholod" />}
+        >
+          {" "}
+          <Avatar
+            src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
+            name="Thomas "
+          />
+          <Typography variant="h6">Daniel moore</Typography>
+          <Button>My Profile</Button>
         </Popover>
-          <SplightRounded />
-          <SplightName />
-        <div className='App__SelectLang'>
-          <SelectLang onClick={handle} selectedLang={selectedLang} languages={languages} style={{width:'50px'}} />
+        <SplightRounded />
+        <SplightName />
+        <div className="App__SelectLang">
+          <SelectLang
+            onClick={handle}
+            selectedLang={selectedLang}
+            languages={languages}
+            style={{ width: "50px" }}
+          />
         </div>
         <div>
           <Tabs width='80'>
