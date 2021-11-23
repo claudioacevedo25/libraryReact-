@@ -146,8 +146,8 @@ function App() {
         </div>
         <div>
           <Tabs width='80'>
-            <Tab label="switch" tabName='Switch' height='50'></Tab>
-            <Tab label="typography" tabName='Widgets' height='50'></Tab>
+            <Tab label="switch" tabName='Switch' height='50' onClick={setTheme}></Tab>
+            <Tab label="typography" tabName='Widgets' height='50' disabled></Tab>
           </Tabs>
         </div>
     </div>
