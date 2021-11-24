@@ -1,6 +1,10 @@
 import _objectWithoutProperties from '@babel/runtime/helpers/objectWithoutProperties';
-import React, { createContext, useState, useContext, useRef, useEffect } from 'react';
+import * as React from 'react';
+import React__default, { createContext, useState, useContext, useRef, useEffect } from 'react';
 import _slicedToArray from '@babel/runtime/helpers/slicedToArray';
+import _extends from '@babel/runtime/helpers/extends';
+import { styled } from '@mui/material/styles';
+import Switch from '@mui/material/Switch';
 
 var e=[],t=[];function n(n,r){if(n&&"undefined"!=typeof document){var a,s=!0===r.prepend?"prepend":"append",d=!0===r.singleTag,i="string"==typeof r.container?document.querySelector(r.container):document.getElementsByTagName("head")[0];if(d){var u=e.indexOf(i);-1===u&&(u=e.push(i)-1,t[u]={}),a=t[u]&&t[u][s]?t[u][s]:t[u][s]=c();}else a=c();65279===n.charCodeAt(0)&&(n=n.substring(1)),a.styleSheet?a.styleSheet.cssText+=n:a.appendChild(document.createTextNode(n));}function c(){var e=document.createElement("style");if(e.setAttribute("type","text/css"),r.attributes)for(var t=Object.keys(r.attributes),n=0;n<t.length;n++)e.setAttribute(t[n],r.attributes[t[n]]);var a="prepend"===s?"afterbegin":"beforeend";return i.insertAdjacentElement(a,e),e}}
 
@@ -14,7 +18,7 @@ var Typography = function Typography(_ref) {
       onClick = _ref.onClick,
       className = _ref.className,
       children = _ref.children;
-  return /*#__PURE__*/React.createElement("label", {
+  return /*#__PURE__*/React__default.createElement("label", {
     onClick: onClick,
     style: {
       color: color,
@@ -43,10 +47,10 @@ var Button = function Button(_ref) {
       props = _objectWithoutProperties(_ref, _excluded);
 
   var children = props.children;
-  return /*#__PURE__*/React.createElement("button", {
+  return /*#__PURE__*/React__default.createElement("button", {
     className: "buttonComponent buttonComponent__".concat(variant, " ").concat(className),
     onClick: onClick
-  }, /*#__PURE__*/React.createElement(Typography, {
+  }, /*#__PURE__*/React__default.createElement(Typography, {
     variant: "textButton"
   }, children));
 };
@@ -82,12 +86,12 @@ var ThemeContextProvider = function ThemeContextProvider(_ref) {
     }
   };
 
-  return /*#__PURE__*/React.createElement(ThemeContext.Provider, {
+  return /*#__PURE__*/React__default.createElement(ThemeContext.Provider, {
     value: {
       mode: mode,
       setTheme: toggleTheme
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     theme: mode,
     className: 'theme__context__provider'
   }, children));
@@ -111,7 +115,7 @@ var SplightName = function SplightName(_ref) {
 
   var width = size + 67;
   var src = mode === 'dark' ? DarkIcon : LightIcon;
-  return /*#__PURE__*/React.createElement("img", {
+  return /*#__PURE__*/React__default.createElement("img", {
     style: {
       width: "".concat(width, "px"),
       height: "".concat(size, "px")
@@ -134,7 +138,7 @@ var SplightRounded = function SplightRounded(_ref) {
   var className = _ref.className,
       size = _ref.size,
       onClick = _ref.onClick;
-  return /*#__PURE__*/React.createElement("img", {
+  return /*#__PURE__*/React__default.createElement("img", {
     style: {
       width: "".concat(size, "px"),
       height: "".concat(size, "px")
@@ -161,7 +165,7 @@ var Avatar = function Avatar(_ref) {
       size = _ref.size,
       className = _ref.className;
   var surname = !!name && name.split(" ").pop();
-  return src ? /*#__PURE__*/React.createElement("img", {
+  return src ? /*#__PURE__*/React__default.createElement("img", {
     src: src,
     alt: name,
     style: {
@@ -169,9 +173,9 @@ var Avatar = function Avatar(_ref) {
       width: "".concat(size, "px")
     },
     className: "".concat(className, " avatar")
-  }) : /*#__PURE__*/React.createElement("div", {
+  }) : /*#__PURE__*/React__default.createElement("div", {
     className: "".concat(className, " avatar avatar__initials")
-  }, /*#__PURE__*/React.createElement(Typography, {
+  }, /*#__PURE__*/React__default.createElement(Typography, {
     variant: "bodyBold"
   }, !!name && name.charAt(0) + " " + surname.charAt(0)));
 };
@@ -192,9 +196,9 @@ var ToggleSwitch = function ToggleSwitch(_ref) {
       checked = _ref.checked,
       size = _ref.size,
       id = _ref.id;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: "".concat(className, "\n     toggleSwitch\n     ", "".concat(size, "__switch")).concat(disabled ? " toggle__switch__disabled" : "")
-  }, /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/React__default.createElement("input", {
     type: "checkbox",
     className: "toggle__switch__checkbox",
     name: id,
@@ -202,16 +206,16 @@ var ToggleSwitch = function ToggleSwitch(_ref) {
     disabled: disabled,
     onChange: onChange,
     checked: checked
-  }), /*#__PURE__*/React.createElement("label", {
+  }), /*#__PURE__*/React__default.createElement("label", {
     className: "toggle__switch__label",
     htmlFor: id
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React__default.createElement("span", {
     className: "toggle__switch__inner",
     color: color,
     style: {
       "--onColor": color
     }
-  }), /*#__PURE__*/React.createElement("span", {
+  }), /*#__PURE__*/React__default.createElement("span", {
     className: "toggle__switch__switch"
   })));
 };
@@ -225,6 +229,60 @@ ToggleSwitch.defaultProps = {
   className: ""
 };
 
+var IOSSwitch = styled(function (props) {
+  return /*#__PURE__*/React.createElement(Switch, _extends({
+    focusVisibleClassName: ".Mui-focusVisible",
+    disableRipple: true
+  }, props));
+})(function (_ref) {
+  var theme = _ref.theme;
+  return {
+    width: 42,
+    height: 26,
+    padding: 0,
+    '& .MuiSwitch-switchBase': {
+      padding: 0,
+      margin: 2,
+      transitionDuration: '300ms',
+      '&.Mui-checked': {
+        transform: 'translateX(16px)',
+        color: '#fff',
+        '& + .MuiSwitch-track': {
+          backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
+          opacity: 1,
+          border: 0
+        },
+        '&.Mui-disabled + .MuiSwitch-track': {
+          opacity: 0.5
+        }
+      },
+      '&.Mui-focusVisible .MuiSwitch-thumb': {
+        color: '#33cf4d',
+        border: '6px solid #fff'
+      },
+      '&.Mui-disabled .MuiSwitch-thumb': {
+        color: theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[600]
+      },
+      '&.Mui-disabled + .MuiSwitch-track': {
+        opacity: theme.palette.mode === 'light' ? 0.7 : 0.3
+      }
+    },
+    '& .MuiSwitch-thumb': {
+      boxSizing: 'border-box',
+      width: 22,
+      height: 22
+    },
+    '& .MuiSwitch-track': {
+      borderRadius: 26 / 2,
+      backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
+      opacity: 1,
+      transition: theme.transitions.create(['background-color'], {
+        duration: 500
+      })
+    }
+  };
+});
+
 var css$7 = ".selectLangComponent {\n    display: flex;\n    border-radius: 19px;\n    padding: 5px 11px;\n    border: 0.5px solid #000;\n    width: fit-content;\n    background-color: rgba(var(--primary));\n}\n\n.selectLangButton {\n    background-color: transparent;\n    border: none;\n    text-transform: uppercase;\n    color:rgb(var(--color1));\n    padding: 0;\n}\n\n.addPiped > label {\n    cursor: pointer;  \n    opacity: 30%;\n}\n\n.addPiped::after {\n    content: \"|\";\n    margin: 0 6px;\n}\n\n.selectLangButton:last-child > span:nth-child(1)::after{\n    content: '';\n    margin: 0;\n}\n\n.selectLangButton--active label {\n    opacity: 1;\n}\n\n";
 n(css$7,{});
 
@@ -233,18 +291,18 @@ var SelectLang = function SelectLang(_ref) {
       languages = _ref.languages,
       _onClick = _ref.onClick,
       selectedLang = _ref.selectedLang;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: "selectLangComponent"
   }, languages.map(function (lang, index) {
-    return /*#__PURE__*/React.createElement("button", {
+    return /*#__PURE__*/React__default.createElement("button", {
       key: index,
       className: "".concat(className, " selectLangButton"),
       onClick: function onClick() {
         return _onClick(lang);
       }
-    }, /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React__default.createElement("span", {
       className: "addPiped ".concat(selectedLang.id === lang.id && "selectLangButton--active")
-    }, /*#__PURE__*/React.createElement(Typography, {
+    }, /*#__PURE__*/React__default.createElement(Typography, {
       variant: "textButton",
       size: 0.563
     }, lang.name)));
@@ -290,15 +348,15 @@ var Popover = function Popover(_ref) {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
   }, [isPopoverOpen]);
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     ref: ref,
     className: "popover ".concat(isPopoverOpen && "popover--activo", " ").concat(className)
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "popover__view",
     onClick: function onClick() {
       return setIsPopoverOpen(!isPopoverOpen);
     }
-  }, displayLabel), /*#__PURE__*/React.createElement("div", {
+  }, displayLabel), /*#__PURE__*/React__default.createElement("div", {
     className: "popover__content ".concat(position === "left" ? "popover__content--left" : "popover__content--right")
   }, children));
 };
@@ -320,33 +378,33 @@ var Header = function Header(_ref) {
       user = _ref.user,
       _onClick = _ref.onClick,
       currentPage = _ref.currentPage;
-  return /*#__PURE__*/React.createElement("nav", {
+  return /*#__PURE__*/React__default.createElement("nav", {
     className: "".concat(className, " navbar__container")
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "navbar__icon"
-  }, icon), /*#__PURE__*/React.createElement("div", {
+  }, icon), /*#__PURE__*/React__default.createElement("div", {
     className: "navbar__pages"
-  }, /*#__PURE__*/React.createElement("ul", {
+  }, /*#__PURE__*/React__default.createElement("ul", {
     className: "navbar__pages__wrapper"
   }, pages.map(function (page, index) {
-    return /*#__PURE__*/React.createElement("li", {
+    return /*#__PURE__*/React__default.createElement("li", {
       className: "navbar__pages__item ".concat(page.id === currentPage.id && "navbar__pages__item--active"),
       key: index,
       onClick: function onClick() {
         return _onClick(page);
       }
-    }, /*#__PURE__*/React.createElement(Typography, {
+    }, /*#__PURE__*/React__default.createElement(Typography, {
       variant: "".concat(page.id === currentPage.id ? "bodyBold2" : "body2")
     }, page.name));
-  }))), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React__default.createElement("div", {
     className: "navbar__user"
   }, user));
 };
 
 Header.defaultProps = {
-  icon: /*#__PURE__*/React.createElement(SplightName, null),
+  icon: /*#__PURE__*/React__default.createElement(SplightName, null),
   pages: [],
-  user: /*#__PURE__*/React.createElement(React.Fragment, null),
+  user: /*#__PURE__*/React__default.createElement(React__default.Fragment, null),
   onClick: function onClick() {},
   currentPage: {
     id: 1
@@ -362,9 +420,9 @@ n(css$4,{});
 var Spinner = function Spinner(_ref) {
   var className = _ref.className,
       size = _ref.size;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: "spinner__component"
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React__default.createElement("img", {
     className: "".concat(className, " spinner__").concat(size),
     src: srcSpinner,
     alt: ""
@@ -386,19 +444,19 @@ var BasicCard = function BasicCard(_ref) {
       subtitle = _ref.subtitle,
       width = _ref.width,
       height = _ref.height;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: "cardBasic ".concat(className)
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "cardBasic__content",
     onClick: onClick,
     style: {
       width: "".concat(width, "px"),
       height: "".concat(height, "px")
     }
-  }, /*#__PURE__*/React.createElement(Typography, {
+  }, /*#__PURE__*/React__default.createElement(Typography, {
     variant: "h6",
     className: "cardBasic__title"
-  }, title)), !!subtitle && /*#__PURE__*/React.createElement(Typography, {
+  }, title)), !!subtitle && /*#__PURE__*/React__default.createElement(Typography, {
     onClick: onClick,
     variant: "body2",
     className: "cardBasic__subtitle"
@@ -428,12 +486,12 @@ var UserCard = function UserCard(_ref) {
       viewAction = _useState2[0],
       setViewAction = _useState2[1];
 
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     disabled: disabled,
     className: "".concat(className, " userCard ")
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "userCard__body"
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     style: {
       backgroundImage: "url(".concat(image, ")")
     },
@@ -441,22 +499,22 @@ var UserCard = function UserCard(_ref) {
     onClick: function onClick() {
       return setViewAction(!viewAction);
     }
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React__default.createElement("div", {
     className: "userCard__content"
-  }, viewAction ? /*#__PURE__*/React.createElement("div", {
+  }, viewAction ? /*#__PURE__*/React__default.createElement("div", {
     className: "userCard__content__action"
-  }, /*#__PURE__*/React.createElement(Typography, {
+  }, /*#__PURE__*/React__default.createElement(Typography, {
     variant: "h6",
     className: "useCard__name"
-  }, name), /*#__PURE__*/React.createElement(Typography, {
+  }, name), /*#__PURE__*/React__default.createElement(Typography, {
     className: "useCard__actionLabel",
     onClick: function onClick() {
       return setViewAction(!viewAction);
     },
     variant: "body2"
-  }, "".concat(actionLabel, ">"))) : /*#__PURE__*/React.createElement("div", {
+  }, "".concat(actionLabel, ">"))) : /*#__PURE__*/React__default.createElement("div", {
     className: "userCard__content__back"
-  }, /*#__PURE__*/React.createElement(Typography, {
+  }, /*#__PURE__*/React__default.createElement(Typography, {
     className: "useCard__backLabel",
     onClick: function onClick() {
       return setViewAction(!viewAction);
@@ -484,7 +542,7 @@ var IconClose = function IconClose(_ref) {
       mode = _useContext.mode;
 
   var src = mode === 'dark' ? DarkIconClose : LightIconClose;
-  return /*#__PURE__*/React.createElement("img", {
+  return /*#__PURE__*/React__default.createElement("img", {
     style: {
       width: "".concat(size, "px"),
       height: "".concat(size, "px")
@@ -515,16 +573,16 @@ var Modal = function Modal(_ref) {
     return null;
   }
 
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: "modal ".concat(!!show && "modalShow", " ").concat(className)
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "modalContent",
     style: {
       width: "".concat(width, "px")
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "modalContent__icon"
-  }, /*#__PURE__*/React.createElement(IconClose, {
+  }, /*#__PURE__*/React__default.createElement(IconClose, {
     onClick: onClose
   })), children));
 };
@@ -571,11 +629,11 @@ var Tabs = function Tabs(_ref) {
       setActiveTab = _useState2[1];
 
   var tabs = children.map(function (child) {
-    return /*#__PURE__*/React.createElement("button", {
+    return /*#__PURE__*/React__default.createElement("button", {
       className: "".concat(child.props.disabled && "tabs__tab--disabled ", "\n         ").concat(child.props.label === activeTab ? ["tabs__tab ", "tabs__tab--active "].join(" ") : "tabs__tab ", "\n         ").concat(className),
       key: child.props.label,
       disabled: child.props.disabled ? true : false
-    }, /*#__PURE__*/React.createElement(Typography, {
+    }, /*#__PURE__*/React__default.createElement(Typography, {
       variant: "h5",
       color: "var(--color1), 0.5",
       onClick: function onClick() {
@@ -587,19 +645,19 @@ var Tabs = function Tabs(_ref) {
   var tabContent = children.filter(function (child) {
     return child.props.label === activeTab;
   });
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement("div", {
     className: "tabs__box",
     style: {
       width: width ? "".concat(width, "vw") : 'auto'
     }
-  }, tabs, "  ", lastElement), /*#__PURE__*/React.createElement("div", null, tabContent));
+  }, tabs, "  ", lastElement), /*#__PURE__*/React__default.createElement("div", null, tabContent));
 };
 
 var Tab = function Tab(_ref2) {
   var children = _ref2.children,
       height = _ref2.height,
       className = _ref2.className;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: className,
     style: height && {
       height: "".concat(height, "vh")
@@ -607,7 +665,7 @@ var Tab = function Tab(_ref2) {
   }, children);
 };
 Tabs.defaultProps = {
-  lastElement: /*#__PURE__*/React.createElement(React.Fragment, null),
+  lastElement: /*#__PURE__*/React__default.createElement(React__default.Fragment, null),
   className: ''
 };
 Tab.defaultProps = {
@@ -632,7 +690,8 @@ var index = {
   Spinner: Spinner,
   BasicCard: BasicCard,
   UserCard: UserCard,
-  Modal: Modal
+  Modal: Modal,
+  IOSSwitch: IOSSwitch
 };
 
 export { index as default };

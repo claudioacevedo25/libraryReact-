@@ -4,6 +4,7 @@ import SplightNameIcon from "./icons/splightName.jsx";
 import SplightRoundedIcon from "./icons/splightRounded.jsx";
 import Avatar from "./avatar/avatar.jsx";
 import ToggleSwitch from "./switch/toggleSwitch.jsx";
+import IOSSwitch from "./iosSwitch/iosSwitch.jsx";
 import SelectLang from "./selectLang/selectLang.jsx";
 import Popover from "./popover/popover.jsx";
 import Header from "./header/header.jsx";
@@ -35,4 +36,5 @@ export default {
     BasicCard,
     UserCard,
     Modal,
+    IOSSwitch,
  };

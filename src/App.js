@@ -14,6 +14,7 @@ import BasicCard from "./sui-library/src/basicCard/basicCard";
 import UserCard from "./sui-library/src/userCard";
 import Tabs, {Tab} from "./sui-library/src/tab/tabs.jsx";
 import Modal from "./sui-library/src/modal";
+import IOSSwitch from "./sui-library/src/iosSwitch";
 import "./App.css";
 
 const languages = [
@@ -88,6 +89,9 @@ function App() {
           <SplightRounded />
           <SplightName />
         </div>
+        <div>
+           <IOSSwitch sx={{ m: 1 }} defaultChecked />
+        </div>
         <div className="App__SelectLang">
           <SelectLang
             onClick={handle}
@@ -150,6 +154,7 @@ function App() {
             <Tab label="typography" tabName='Widgets' height='50' disabled></Tab>
           </Tabs>
         </div>
+        
     </div>
     </>
   );

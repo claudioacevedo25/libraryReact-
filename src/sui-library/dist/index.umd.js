@@ -1,14 +1,35 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@babel/runtime/helpers/objectWithoutProperties'), require('react'), require('@babel/runtime/helpers/slicedToArray')) :
-  typeof define === 'function' && define.amd ? define(['@babel/runtime/helpers/objectWithoutProperties', 'react', '@babel/runtime/helpers/slicedToArray'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global["react-awesome-buttons"] = factory(global._objectWithoutProperties, global.React, global._slicedToArray));
-})(this, (function (_objectWithoutProperties, React, _slicedToArray) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@babel/runtime/helpers/objectWithoutProperties'), require('react'), require('@babel/runtime/helpers/slicedToArray'), require('@babel/runtime/helpers/extends'), require('@mui/material/styles'), require('@mui/material/Switch')) :
+  typeof define === 'function' && define.amd ? define(['@babel/runtime/helpers/objectWithoutProperties', 'react', '@babel/runtime/helpers/slicedToArray', '@babel/runtime/helpers/extends', '@mui/material/styles', '@mui/material/Switch'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global["react-awesome-buttons"] = factory(global._objectWithoutProperties, global.React, global._slicedToArray, global._extends, global.styles, global.Switch));
+})(this, (function (_objectWithoutProperties, React, _slicedToArray, _extends, styles, Switch) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
+  function _interopNamespace(e) {
+    if (e && e.__esModule) return e;
+    var n = Object.create(null);
+    if (e) {
+      Object.keys(e).forEach(function (k) {
+        if (k !== 'default') {
+          var d = Object.getOwnPropertyDescriptor(e, k);
+          Object.defineProperty(n, k, d.get ? d : {
+            enumerable: true,
+            get: function () { return e[k]; }
+          });
+        }
+      });
+    }
+    n["default"] = e;
+    return Object.freeze(n);
+  }
+
   var _objectWithoutProperties__default = /*#__PURE__*/_interopDefaultLegacy(_objectWithoutProperties);
   var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+  var React__namespace = /*#__PURE__*/_interopNamespace(React);
   var _slicedToArray__default = /*#__PURE__*/_interopDefaultLegacy(_slicedToArray);
+  var _extends__default = /*#__PURE__*/_interopDefaultLegacy(_extends);
+  var Switch__default = /*#__PURE__*/_interopDefaultLegacy(Switch);
 
   var e=[],t=[];function n(n,r){if(n&&"undefined"!=typeof document){var a,s=!0===r.prepend?"prepend":"append",d=!0===r.singleTag,i="string"==typeof r.container?document.querySelector(r.container):document.getElementsByTagName("head")[0];if(d){var u=e.indexOf(i);-1===u&&(u=e.push(i)-1,t[u]={}),a=t[u]&&t[u][s]?t[u][s]:t[u][s]=c();}else a=c();65279===n.charCodeAt(0)&&(n=n.substring(1)),a.styleSheet?a.styleSheet.cssText+=n:a.appendChild(document.createTextNode(n));}function c(){var e=document.createElement("style");if(e.setAttribute("type","text/css"),r.attributes)for(var t=Object.keys(r.attributes),n=0;n<t.length;n++)e.setAttribute(t[n],r.attributes[t[n]]);var a="prepend"===s?"afterbegin":"beforeend";return i.insertAdjacentElement(a,e),e}}
 
@@ -232,6 +253,60 @@
     id: '',
     className: ""
   };
+
+  var IOSSwitch = styles.styled(function (props) {
+    return /*#__PURE__*/React__namespace.createElement(Switch__default["default"], _extends__default["default"]({
+      focusVisibleClassName: ".Mui-focusVisible",
+      disableRipple: true
+    }, props));
+  })(function (_ref) {
+    var theme = _ref.theme;
+    return {
+      width: 42,
+      height: 26,
+      padding: 0,
+      '& .MuiSwitch-switchBase': {
+        padding: 0,
+        margin: 2,
+        transitionDuration: '300ms',
+        '&.Mui-checked': {
+          transform: 'translateX(16px)',
+          color: '#fff',
+          '& + .MuiSwitch-track': {
+            backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
+            opacity: 1,
+            border: 0
+          },
+          '&.Mui-disabled + .MuiSwitch-track': {
+            opacity: 0.5
+          }
+        },
+        '&.Mui-focusVisible .MuiSwitch-thumb': {
+          color: '#33cf4d',
+          border: '6px solid #fff'
+        },
+        '&.Mui-disabled .MuiSwitch-thumb': {
+          color: theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[600]
+        },
+        '&.Mui-disabled + .MuiSwitch-track': {
+          opacity: theme.palette.mode === 'light' ? 0.7 : 0.3
+        }
+      },
+      '& .MuiSwitch-thumb': {
+        boxSizing: 'border-box',
+        width: 22,
+        height: 22
+      },
+      '& .MuiSwitch-track': {
+        borderRadius: 26 / 2,
+        backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
+        opacity: 1,
+        transition: theme.transitions.create(['background-color'], {
+          duration: 500
+        })
+      }
+    };
+  });
 
   var css$7 = ".selectLangComponent {\n    display: flex;\n    border-radius: 19px;\n    padding: 5px 11px;\n    border: 0.5px solid #000;\n    width: fit-content;\n    background-color: rgba(var(--primary));\n}\n\n.selectLangButton {\n    background-color: transparent;\n    border: none;\n    text-transform: uppercase;\n    color:rgb(var(--color1));\n    padding: 0;\n}\n\n.addPiped > label {\n    cursor: pointer;  \n    opacity: 30%;\n}\n\n.addPiped::after {\n    content: \"|\";\n    margin: 0 6px;\n}\n\n.selectLangButton:last-child > span:nth-child(1)::after{\n    content: '';\n    margin: 0;\n}\n\n.selectLangButton--active label {\n    opacity: 1;\n}\n\n";
   n(css$7,{});
@@ -640,7 +715,8 @@
     Spinner: Spinner,
     BasicCard: BasicCard,
     UserCard: UserCard,
-    Modal: Modal
+    Modal: Modal,
+    IOSSwitch: IOSSwitch
   };
 
   return index;
