@@ -6,6 +6,12 @@
   padding: 15px;
 }
 
+.appSearch{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
 .App__labels {
   margin: 20px;
   display: flex;

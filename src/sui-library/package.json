@@ -31,6 +31,7 @@
     "rollup-plugin-styles": "^3.14.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.15.4"
+    "@babel/runtime": "^7.15.4",
+    "akar-icons": "^1.9.3"
   }
 }
