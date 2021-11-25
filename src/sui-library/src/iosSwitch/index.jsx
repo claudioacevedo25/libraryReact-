@@ -1,3 +1,3 @@
-import IOSSwitch from './iosSwitch.jsx';
+import SplightSwitch from './iosSwitch';
 
-export default IOSSwitch;
+export default SplightSwitch;

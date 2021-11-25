@@ -90,7 +90,7 @@ function App() {
           <SplightName />
         </div>
         <div>
-           <IOSSwitch sx={{ m: 1 }} defaultChecked />
+           <IOSSwitch onChange={setTheme} size='small' />
         </div>
         <div className="App__SelectLang">
           <SelectLang
