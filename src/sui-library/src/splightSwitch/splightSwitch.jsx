@@ -17,7 +17,6 @@ const SplightSwitch = ({size, onChange, className, disabled}) => {
 SplightSwitch.defaultProps = {
     size: 'small',
     onChange: () => {},
-    disabled: false,
     className: ''
 }
 

@@ -14,7 +14,7 @@ import BasicCard from "./sui-library/src/basicCard/basicCard";
 import UserCard from "./sui-library/src/userCard";
 import Tabs, {Tab} from "./sui-library/src/tab/tabs.jsx";
 import Modal from "./sui-library/src/modal";
-import IOSSwitch from "./sui-library/src/iosSwitch";
+import SplightSwitch from "./sui-library/src/splightSwitch";
 import Search from "./sui-library/src/searchInput";
 import "./App.css";
 
@@ -97,7 +97,7 @@ function App() {
           <SplightName />
         </div>
         <div>
-           <IOSSwitch  size='small' />
+           <SplightSwitch />
         </div>
         <div className="App__SelectLang">
           <SelectLang

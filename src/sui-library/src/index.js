@@ -4,7 +4,6 @@ import SplightNameIcon from "./icons/splightName.jsx";
 import SplightRoundedIcon from "./icons/splightRounded.jsx";
 import Avatar from "./avatar/avatar.jsx";
 import ToggleSwitch from "./switch/toggleSwitch.jsx";
-import IOSSwitch from "./iosSwitch/iosSwitch.jsx";
 import SelectLang from "./selectLang/selectLang.jsx";
 import Popover from "./popover/popover.jsx";
 import Header from "./header/header.jsx";
@@ -13,6 +12,7 @@ import BasicCard from "./basicCard/basicCard.jsx";
 import UserCard from "./userCard/userCard.jsx";
 import Modal from "./modal/modal.jsx";
 import SearchInput from "./searchInput/searchInput.jsx";
+import SplightSwitch from "./splightSwitch/splightSwitch.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './themeContextProvider/theme.js';
 import Tabs, {Tab} from './tab/tabs.jsx'
@@ -37,6 +37,6 @@ export default {
     BasicCard,
     UserCard,
     Modal,
-    IOSSwitch,
     SearchInput,
+    SplightSwitch,
  };
