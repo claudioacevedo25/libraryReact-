@@ -12,6 +12,7 @@ import Spinner from "./spinner/spinner.jsx";
 import BasicCard from "./basicCard/basicCard.jsx";
 import UserCard from "./userCard/userCard.jsx";
 import Modal from "./modal/modal.jsx";
+import SearchInput from "./searchInput/searchInput.jsx";
 import ThemeContextProvider, {ThemeContext} from "./themeContextProvider/themeContextProvider.jsx"
 import theme from './themeContextProvider/theme.js';
 import Tabs, {Tab} from './tab/tabs.jsx'
@@ -37,4 +38,5 @@ export default {
     UserCard,
     Modal,
     IOSSwitch,
+    SearchInput,
  };

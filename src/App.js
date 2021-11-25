@@ -15,6 +15,7 @@ import UserCard from "./sui-library/src/userCard";
 import Tabs, {Tab} from "./sui-library/src/tab/tabs.jsx";
 import Modal from "./sui-library/src/modal";
 import IOSSwitch from "./sui-library/src/iosSwitch";
+import Search from "./sui-library/src/searchInput";
 import "./App.css";
 
 const languages = [
@@ -32,7 +33,7 @@ function App() {
   const { setTheme } = useContext(ThemeContext);
   const [selectedLang, setSelectedLang] = useState(languages[0]);
   const [currentPage, setCurrentPage] = useState(pages[0]);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const isLoading = false; //turn on true to test Spinner component
 
   const handle = (lang) => {
@@ -42,13 +43,16 @@ function App() {
     setCurrentPage(page);
   };
 
+  const onChangeData = (e) => {
+  }
+
   return (
     <>
       {isLoading && <Spinner />}
       <Header pages={pages} currentPage={currentPage} onClick={changePage} />
       <div className="App">
        <Tabs>
-        <Tab label="basiccard" tabName='basicCard' height='50'>
+        <Tab label="basiccard" tabName='basicCard' >
           <BasicCard
           title="Digital Protection Manager"
           subtitle="Go Now"
@@ -56,8 +60,11 @@ function App() {
           height="124"
           onClick={setTheme}
         />
+        <div className="appSearch">
+        <Search disabled onChange={onChangeData} />
+        </div>
         </Tab>
-        <Tab label="usercard" tabName='UserCard' height='50'>
+        <Tab label="usercard" tabName='UserCard'>
         <UserCard
           name="Cholod Estrella"
           image="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
@@ -83,14 +90,14 @@ function App() {
         </Modal>
         </div>
         <div className="App__Switch">
-          <SwitchTest />
+          <SwitchTest/>
         </div>
         <div className="App__Icons">
           <SplightRounded />
           <SplightName />
         </div>
         <div>
-           <IOSSwitch onChange={setTheme} size='small' />
+           <IOSSwitch  size='small' />
         </div>
         <div className="App__SelectLang">
           <SelectLang
@@ -130,7 +137,6 @@ function App() {
           position="left"
           displayLabel={<Avatar name="Estrella cholod" />}
         >
-          {" "}
           <Avatar
             src="https://profile-pictures-test.s3.amazonaws.com/fa06a8891d1a4316992d4197cd2869ea.jpg"
             name="Thomas "

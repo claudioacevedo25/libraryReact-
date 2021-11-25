@@ -34,6 +34,7 @@
     "@babel/runtime": "^7.15.4",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
-    "@mui/material": "^5.2.0"
+    "@mui/material": "^5.2.0",
+    "akar-icons": "^1.9.3"
   }
 }
