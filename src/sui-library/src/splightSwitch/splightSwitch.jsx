@@ -6,7 +6,7 @@ import './splightSwitch.css'
 const SplightSwitch = ({size, onChange, className, disabled}) => {
     return (
         <Switch 
-            className={`${className} ios__switch`} 
+            className={`${className} ios__switch ${disabled ? "ios__switch--disabled" : ""}`} 
             onChange={onChange} 
             size={`${size}`}
             disabled={disabled}

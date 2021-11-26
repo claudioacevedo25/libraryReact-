@@ -3,7 +3,6 @@ import Typography from "./typography/typography.jsx";
 import SplightNameIcon from "./icons/splightName.jsx";
 import SplightRoundedIcon from "./icons/splightRounded.jsx";
 import Avatar from "./avatar/avatar.jsx";
-import ToggleSwitch from "./switch/toggleSwitch.jsx";
 import SelectLang from "./selectLang/selectLang.jsx";
 import Popover from "./popover/popover.jsx";
 import Header from "./header/header.jsx";
@@ -29,7 +28,6 @@ export default {
     theme,
     SplightRoundedIcon,
     SplightNameIcon,
-    ToggleSwitch,
     SelectLang,
     Popover,
     Header,

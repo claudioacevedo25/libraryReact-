@@ -5,7 +5,6 @@ import Typography from "./sui-library/src/typography";
 import SplightRounded from "./sui-library/src/icons/splightRounded.jsx";
 import SplightName from "./sui-library/src/icons/splightName.jsx";
 import Avatar from "./sui-library/src/avatar";
-import SwitchTest from "./components/switchTest";
 import SelectLang from "./sui-library/src/selectLang";
 import Popover from "./sui-library/src/popover";
 import Header from "./sui-library/src/header";
@@ -89,15 +88,12 @@ function App() {
           <Button onClick={setTheme}>invite user</Button>
         </Modal>
         </div>
-        <div className="App__Switch">
-          <SwitchTest/>
-        </div>
         <div className="App__Icons">
           <SplightRounded />
           <SplightName />
         </div>
         <div>
-           <SplightSwitch />
+           <SplightSwitch onChange={setTheme} />
         </div>
         <div className="App__SelectLang">
           <SelectLang
